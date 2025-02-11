@@ -49,20 +49,29 @@ for pair in pairs:
     token0_symbol = pair['token0']['symbol']
     token1_symbol = pair['token1']['symbol']
     
-    # Create contract instance
-    pair_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['id']), abi=PAIR_ABI)
+    if token1_symbol != "WETH" and token0_symbol != "WETH":
+        if token1_symbol != "USDC" and token0_symbol != "USDC":
+            if token1_symbol != "USDT" and token0_symbol != "USDT":
+                print(f"{token0_symbol} -> {token1_symbol}")
+                i += 1
+    
+    try:
+        # Create contract instance
+        pair_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['id']), abi=PAIR_ABI)
 
-    # Create ERC-20 contract instances for token0 and token1
-    token0_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token0']['id']), abi=ERC20_ABI)
-    token1_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token1']['id']), abi=ERC20_ABI)
+        # Create ERC-20 contract instances for token0 and token1
+        token0_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token0']['id']), abi=ERC20_ABI)
+        token1_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token1']['id']), abi=ERC20_ABI)
 
-    # Get decimals for token0 and token1
-    token0_decimals = token0_contract.functions.decimals().call()
-    token1_decimals = token1_contract.functions.decimals().call()
+        # Get decimals for token0 and token1
+        token0_decimals = token0_contract.functions.decimals().call()
+        token1_decimals = token1_contract.functions.decimals().call()
 
-    # Get reserves from the pair contract
-    reserve0, reserve1, _ = pair_contract.functions.getReserves().call()
-
+        # Get reserves from the pair contract
+        reserve0, reserve1, _ = pair_contract.functions.getReserves().call()
+    except:
+        print(f"{token0_symbol} -> {token1_symbol}")
+        continue
     # Trade size (amount of token0 being traded)
     amount_input = 10000000  # Example: 10,000 token0
     inputMinusFee = amount_input * (1.0 - UNISWAP_V2_FEE)
@@ -86,18 +95,16 @@ for pair in pairs:
 
     # calculate readable price
     real_price = new_price * 10**(token0_decimals - token1_decimals)
-    # Print the extracted information
-    print(f"Reserve USD: {reserve_usd}")
-    print(f"Token 0: {token0_symbol}, reserves: {reserve0}")
-    print(f"Token 1: {token1_symbol}, reserves: {reserve1}")
-    print(f"Current price: {current_price}")
-    print(f"My price: {amount_output / amount_input}")
-    print(f"New price: {new_price}")
-    print(f"Price slippage: {slippage}%")
-    print(f"Real price: {real_price} {token1_symbol} per {token0_symbol}")
-    print(f"            {1/real_price} {token0_symbol} per {token1_symbol}")
+    # # Print the extracted information
+    # print(f"Reserve USD: {reserve_usd}")
+    # print(f"Token 0: {token0_symbol}, reserves: {reserve0}")
+    # print(f"Token 1: {token1_symbol}, reserves: {reserve1}")
+    # print(f"Current price: {current_price}")
+    # print(f"My price: {amount_output / amount_input}")
+    # print(f"New price: {new_price}")
+    # print(f"Price slippage: {slippage}%")
+    # print(f"Real price: {real_price} {token1_symbol} per {token0_symbol}")
+    # print(f"            {1/real_price} {token0_symbol} per {token1_symbol}")
 
-    print('-' * 40)
-    i+=1
-    if i > 2:
-        break
+    # print('-' * 40)
+print(i)

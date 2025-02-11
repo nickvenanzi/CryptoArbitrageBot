@@ -180,6 +180,43 @@ json_file_path = "uniswapv3Pools.json"  # Replace with the path to your JSON fil
 
 # Read and parse the JSON data
 json_data = read_json_from_file(json_file_path)
-# Call the function
-parse_uniswap_pools(json_data)
+# # Call the function
+# parse_uniswap_pools(json_data)
 
+# Load the JSON file
+with open('uniswapv2Pools.json', 'r') as file:
+    data = json.load(file)
+
+# Access the pairs data
+pairs = data['pairs']
+
+symbolsToPairs = {}
+
+# Loop through each v2 pool pair and extract relevant information
+for pair in pairs:
+    token0_symbol = pair['token0']['symbol']
+    token1_symbol = pair['token1']['symbol']
+    if token0_symbol not in symbolsToPairs.keys():
+        symbolsToPairs[token0_symbol] = 0
+    symbolsToPairs[token0_symbol] += 1
+
+    if token1_symbol not in symbolsToPairs.keys():
+        symbolsToPairs[token1_symbol] = 0
+    symbolsToPairs[token1_symbol] += 1
+
+# Loop through each v3 pool pair and extract relevant information
+pools = json_data.get("pools", [])
+for pool in pools:
+    token0 = pool["token0"]
+    token1 = pool["token1"]
+
+    if token0["symbol"] not in symbolsToPairs.keys():
+        symbolsToPairs[token0["symbol"]] = 0
+    symbolsToPairs[token0["symbol"]] += 1
+
+    if token1["symbol"] not in symbolsToPairs.keys():
+        symbolsToPairs[token1["symbol"]] = 0
+    symbolsToPairs[token1["symbol"]] += 1
+
+for (i, (key, value)) in enumerate(sorted(symbolsToPairs.items(), key=lambda item: item[1])):
+    print(f"{len(symbolsToPairs)-i}. {key}: {value}")

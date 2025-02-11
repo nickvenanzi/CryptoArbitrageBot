@@ -2596,21 +2596,6 @@
         "volumeUSD": "1096941920.998312761259657742864352"
     },
     {
-        "id": "0x70258aa9830c2c84d855df1d61e12c256f6448b4",
-        "reserveUSD": "880668.209861425038946198881305414",
-        "token0": {
-        "id": "0x0ba45a8b5d5575935b8158a88c631e9f9c95a2e5",
-        "name": "Tellor Tributes",
-        "symbol": "TRB"
-        },
-        "token1": {
-        "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "name": "Wrapped Ether",
-        "symbol": "WETH"
-        },
-        "volumeUSD": "85917123.5763920901949821756793737"
-    },
-    {
         "id": "0x4eefe02fce5b53ca33c7717bbd8ad3c9cb0609f1",
         "reserveUSD": "876476.8734166437875319055074824761",
         "token0": {
@@ -5729,21 +5714,6 @@
         "symbol": "WETH"
         },
         "volumeUSD": "1355778.730963195515351955822759857"
-    },
-    {
-        "id": "0xb3fee89d04d02dc4b522d487c24c810ad8e5809c",
-        "reserveUSD": "403512.5170042681815095147146862279",
-        "token0": {
-        "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "name": "Wrapped Ether",
-        "symbol": "WETH"
-        },
-        "token1": {
-        "id": "0xe0b7927c4af23765cb51314a0e0521a9645f0e2a",
-        "name": "DGD",
-        "symbol": "DGD"
-        },
-        "volumeUSD": "7648188.371272744357527226078238742"
     },
     {
         "id": "0x7a922aea89288d8c91777beecc68df4a17151df1",
