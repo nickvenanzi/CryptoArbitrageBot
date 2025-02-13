@@ -1,0 +1,1202 @@
+{
+    "pools": [
+    {
+        "address": "0x3de27efa2f1aa663ae5d458857e731c129069f29",
+        "id": "0x3de27efa2f1aa663ae5d458857e731c129069f29000200000000000000000588",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+            "balance": "12677.507511261574905733",
+            "decimals": 18,
+            "name": "Wrapped liquid staked Ether 2.0",
+            "symbol": "wstETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "balance": "655444.762473832715692955",
+            "decimals": 18,
+            "name": "Aave Token",
+            "symbol": "AAVE",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "198961522.3279252339070041138766391"
+    },
+    {
+        "address": "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56",
+        "id": "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+            "balance": "18754502.913449103607146019",
+            "decimals": 18,
+            "name": "Balancer",
+            "symbol": "BAL",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "3475.222556289611603127",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "45424485.6918521826975599032150931"
+    },
+    {
+        "address": "0xcb0e14e96f2cefa8550ad8e4aea344f211e5061d",
+        "id": "0xcb0e14e96f2cefa8550ad8e4aea344f211e5061d00020000000000000000011a",
+        "poolType": "Weighted",
+        "swapFee": "0.001",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "647.312617179558692465",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xcafe001067cdef266afb7eb5a286dcfd277f3de5",
+            "balance": "308791237.078204713533332358",
+            "decimals": 18,
+            "name": "ParaSwap",
+            "symbol": "PSP",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "8472307.032893799907450553240157573"
+    },
+    {
+        "address": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b",
+        "id": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b000200000000000000000026",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+            "balance": "37495.475487443836514668",
+            "decimals": 18,
+            "name": "Gnosis Token",
+            "symbol": "GNO",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "630.06636981614644593",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "8287991.859908406136886235939809814"
+    },
+    {
+        "address": "0x3ff3a210e57cfe679d9ad1e9ba6453a716c56a2e",
+        "id": "0x3ff3a210e57cfe679d9ad1e9ba6453a716c56a2e0002000000000000000005d5",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "3665124.765151",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+            "balance": "13502549.113665514651461294",
+            "decimals": 18,
+            "name": "StargateToken",
+            "symbol": "STG",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "7330249.530302"
+    },
+    {
+        "address": "0x36be1e97ea98ab43b4debf92742517266f5731a3",
+        "id": "0x36be1e97ea98ab43b4debf92742517266f5731a3000200000000000000000466",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x44108f0223a3c3028f5fe7aec7f9bb2e66bef82f",
+            "balance": "9390481.986837273767676866",
+            "decimals": 18,
+            "name": "Across Protocol Token",
+            "symbol": "ACX",
+            "weight": "0.5"
+        },
+        {
+            "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+            "balance": "1001.185125866670780553",
+            "decimals": 18,
+            "name": "Wrapped liquid staked Ether 2.0",
+            "symbol": "wstETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "6246214.877035206974918649160818355"
+    },
+    {
+        "address": "0xf16aee6a71af1a9bc8f56975a4c2705ca7a782bc",
+        "id": "0xf16aee6a71af1a9bc8f56975a4c2705ca7a782bc0002000000000000000004bb",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "402.79943786797825535",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
+            "balance": "322982.112522277419999607",
+            "decimals": 18,
+            "name": "Alchemix",
+            "symbol": "ALCX",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "5297585.255183359738170533171497815"
+    },
+    {
+        "address": "0xde8c195aa41c11a0c4787372defbbddaa31306d2",
+        "id": "0xde8c195aa41c11a0c4787372defbbddaa31306d2000200000000000000000181",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "971.492973998455670053",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+            "balance": "6180112.185802924355171819",
+            "decimals": 18,
+            "name": "CoW Protocol Token",
+            "symbol": "COW",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "5079364.083976501252675939924376317"
+    },
+    {
+        "address": "0x92762b42a06dcdddc5b7362cfb01e631c4d44b40",
+        "id": "0x92762b42a06dcdddc5b7362cfb01e631c4d44b40000200000000000000000182",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+            "balance": "11393.564868068541922113",
+            "decimals": 18,
+            "name": "Gnosis Token",
+            "symbol": "GNO",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+            "balance": "4874162.114946524870692049",
+            "decimals": 18,
+            "name": "CoW Protocol Token",
+            "symbol": "COW",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "4029489.81568775365686123815025319"
+    },
+    {
+        "address": "0xfd1cf6fd41f229ca86ada0584c63c49c3d66bbc9",
+        "id": "0xfd1cf6fd41f229ca86ada0584c63c49c3d66bbc9000200000000000000000438",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x808507121b80c02388fad14726482e061b8da827",
+            "balance": "461377.11870126840162759",
+            "decimals": 18,
+            "name": "Pendle",
+            "symbol": "PENDLE",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "608.041851610400376318",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "3230920.775077799411711440743441494"
+    },
+    {
+        "address": "0x9232a548dd9e81bac65500b5e0d918f8ba93675c",
+        "id": "0x9232a548dd9e81bac65500b5e0d918f8ba93675c000200000000000000000423",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "224.785401723938050665",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xfd0205066521550d7d7ab19da8f72bb004b4c341",
+            "balance": "133242569.837017995959445565",
+            "decimals": 18,
+            "name": "Liquidity Incentive Token",
+            "symbol": "LIT",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "2905828.99224054036286968799342522"
+    },
+    {
+        "address": "0xa6f548df93de924d73be7d25dc02554c6bd66db5",
+        "id": "0xa6f548df93de924d73be7d25dc02554c6bd66db500020000000000000000000e",
+        "poolType": "Weighted",
+        "swapFee": "0.0025",
+        "tokens": [
+        {
+            "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "balance": "11.95573976",
+            "decimals": 8,
+            "name": "Wrapped BTC",
+            "symbol": "WBTC",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "437.868420166185781396",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "2264151.92507577625593703192625037"
+    },
+    {
+        "address": "0x8bd4a1e74a27182d23b98c10fd21d4fbb0ed4ba0",
+        "id": "0x8bd4a1e74a27182d23b98c10fd21d4fbb0ed4ba00002000000000000000004ed",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x470ebf5f030ed85fc1ed4c2d36b9dd02e77cf1b7",
+            "balance": "292596.177441611111229918",
+            "decimals": 18,
+            "name": "Temple",
+            "symbol": "TEMPLE",
+            "weight": "0.5"
+        },
+        {
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "balance": "1074382.443803488092064377",
+            "decimals": 18,
+            "name": "Dai Stablecoin",
+            "symbol": "DAI",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "2148764.887606976184128754"
+    },
+    {
+        "address": "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9",
+        "id": "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9000200000000000000000274",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "386.60413949636911362",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
+            "balance": "2984868.335105673510295461",
+            "decimals": 18,
+            "name": "Aura",
+            "symbol": "AURA",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "2021485.863550887602209258958555104"
+    },
+    {
+        "address": "0x39eb558131e5ebeb9f76a6cbf6898f6e6dce5e4e",
+        "id": "0x39eb558131e5ebeb9f76a6cbf6898f6e6dce5e4e0002000000000000000005c8",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x559b7bfc48a5274754b08819f75c5f27af53d53b",
+            "balance": "68338161.40056569539355958",
+            "decimals": 18,
+            "name": "QiDao",
+            "symbol": "QI",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "113.796869092379369163",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "1483939.178626802394123885024206053"
+    },
+    {
+        "address": "0xb986fd52697f16be888bfad2c5bf12cd67ce834b",
+        "id": "0xb986fd52697f16be888bfad2c5bf12cd67ce834b000200000000000000000634",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x3106a0a076bedae847652f42ef07fd58589e001f",
+            "balance": "5412574.570292036668336155",
+            "decimals": 18,
+            "name": "Alkimi Exchange",
+            "symbol": "$ADS",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "88.866052286661647394",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "1168896.125287096847386021135526159"
+    },
+    {
+        "address": "0xc29562b045d80fd77c69bec09541f5c16fe20d9d",
+        "id": "0xc29562b045d80fd77c69bec09541f5c16fe20d9d000200000000000000000251",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "73.64007208999220648",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
+            "balance": "2274559.472381906410969483",
+            "decimals": 18,
+            "name": "Aura",
+            "symbol": "AURA",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "973432.5209352098811257964255556483"
+    },
+    {
+        "address": "0x6228f64d5ba8376652bfe7e36569d595347cf6fb",
+        "id": "0x6228f64d5ba8376652bfe7e36569d595347cf6fb0002000000000000000005df",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x18084fba666a33d37592fa2633fd49a74dd93a88",
+            "balance": "2.016118313415386724",
+            "decimals": 18,
+            "name": "tBTC v2",
+            "symbol": "tBTC",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
+            "balance": "37114796.24575979760665183",
+            "decimals": 18,
+            "name": "Threshold Network Token",
+            "symbol": "T",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "969942.4398308158010354113895679501"
+    },
+    {
+        "address": "0x5122e01d819e58bb2e22528c0d68d310f0aa6fd7",
+        "id": "0x5122e01d819e58bb2e22528c0d68d310f0aa6fd7000200000000000000000163",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "63.214595866218996304",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xcfeaead4947f0705a14ec42ac3d44129e1ef3ed5",
+            "balance": "15405980.87823798",
+            "decimals": 8,
+            "name": "Notional",
+            "symbol": "NOTE",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "833809.7398780919315739929773150637"
+    },
+    {
+        "address": "0x8167a1117691f39e05e9131cfa88f0e3a620e967",
+        "id": "0x8167a1117691f39e05e9131cfa88f0e3a620e96700020000000000000000038c",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "61.129094613722752618",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
+            "balance": "30520082.625998463498391363",
+            "decimals": 18,
+            "name": "Threshold Network Token",
+            "symbol": "T",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "799077.4988620672619994777138328668"
+    },
+    {
+        "address": "0xcf7b51ce5755513d4be016b0e28d6edeffa1d52a",
+        "id": "0xcf7b51ce5755513d4be016b0e28d6edeffa1d52a000200000000000000000617",
+        "poolType": "Weighted",
+        "swapFee": "0.005",
+        "tokens": [
+        {
+            "address": "0x137ddb47ee24eaa998a535ab00378d6bfa84f893",
+            "balance": "13591222.36124369756820429",
+            "decimals": 18,
+            "name": "Radiant",
+            "symbol": "RDNT",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "42.359540254226127476",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "547587.0729358059724567821827095449"
+    },
+    {
+        "address": "0x771fbbfcbd8ba252f7f1ee47c1a486bdb0b5bc62",
+        "id": "0x771fbbfcbd8ba252f7f1ee47c1a486bdb0b5bc6200020000000000000000063d",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+            "balance": "30478066.440457525087938983",
+            "decimals": 18,
+            "name": "Reserve Rights",
+            "symbol": "RSR",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "101.53157866613700735",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "527459.3305276729774592758897532886"
+    },
+    {
+        "address": "0x798b112420ad6391a4129ac25ef59663a44c88bb",
+        "id": "0x798b112420ad6391a4129ac25ef59663a44c88bb0002000000000000000003f4",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x44108f0223a3c3028f5fe7aec7f9bb2e66bef82f",
+            "balance": "783155.193827198050196498",
+            "decimals": 18,
+            "name": "Across Protocol Token",
+            "symbol": "ACX",
+            "weight": "0.5"
+        },
+        {
+            "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+            "balance": "83.336790689162453541",
+            "decimals": 18,
+            "name": "Wrapped liquid staked Ether 2.0",
+            "symbol": "wstETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "519923.3272232378406989748408356961"
+    },
+    {
+        "address": "0xcf8dfdb73e7434b05903b5599fb96174555f4353",
+        "id": "0xcf8dfdb73e7434b05903b5599fb96174555f43530002000000000000000006c3",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x583019ff0f430721ada9cfb4fac8f06ca104d0b4",
+            "balance": "102.726265000309458126",
+            "decimals": 18,
+            "name": "Staked Yearn Ether",
+            "symbol": "st-yETH",
+            "weight": "0.4"
+        },
+        {
+            "address": "0x9deb0fc809955b79c85e82918e8586d3b7d2695a",
+            "balance": "33499.156054342781127395",
+            "decimals": 18,
+            "name": "GoldenBoys",
+            "symbol": "GOLD",
+            "weight": "0.6"
+        }
+        ],
+        "totalLiquidity": "490841.6385336952746923754189830443"
+    },
+    {
+        "address": "0xb721a3b209f8b598b926826f69280bee7a6bb796",
+        "id": "0xb721a3b209f8b598b926826f69280bee7a6bb79600010000000000000000037c",
+        "poolType": "Weighted",
+        "swapFee": "0.1",
+        "tokens": [
+        {
+            "address": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+            "balance": "15076.43885974454351403",
+            "decimals": 18,
+            "name": "Rai Reflex Index",
+            "symbol": "RAI",
+            "weight": "0.1"
+        },
+        {
+            "address": "0x6243d8cea23066d098a15582d81a598b4e8391f4",
+            "balance": "9347.416486676109688195",
+            "decimals": 18,
+            "name": "Flex Ungovernance Token",
+            "symbol": "FLX",
+            "weight": "0.063"
+        },
+        {
+            "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+            "balance": "4.700405755932095607",
+            "decimals": 18,
+            "name": "Rocket Pool ETH",
+            "symbol": "rETH",
+            "weight": "0.03"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "42.514574608629957224",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.257"
+        },
+        {
+            "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+            "balance": "26299.210172511002160456",
+            "decimals": 18,
+            "name": "Rocket Pool Protocol",
+            "symbol": "RPL",
+            "weight": "0.55"
+        }
+        ],
+        "totalLiquidity": "461191.5962833908087084145840025792"
+    },
+    {
+        "address": "0x9d0d36cc9e989598f01a4656e0efff73896c30ed",
+        "id": "0x9d0d36cc9e989598f01a4656e0efff73896c30ed0001000000000000000006e6",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
+            "balance": "640274006.664654589453790343",
+            "decimals": 18,
+            "name": "Apu Apustaja",
+            "symbol": "APU",
+            "weight": "0.3333"
+        },
+        {
+            "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+            "balance": "15190109551.942597141757876178",
+            "decimals": 18,
+            "name": "Pepe",
+            "symbol": "PEPE",
+            "weight": "0.3333"
+        },
+        {
+            "address": "0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c",
+            "balance": "209937.57535895",
+            "decimals": 8,
+            "name": "SPX6900",
+            "symbol": "SPX",
+            "weight": "0.3334"
+        }
+        ],
+        "totalLiquidity": "370028.5669053846127630439065636717"
+    },
+    {
+        "address": "0x4f883b5c0c01fe13cedd05c684f00266b0626e23",
+        "id": "0x4f883b5c0c01fe13cedd05c684f00266b0626e230002000000000000000006ad",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x2e3cfe45e3ee7c017277f22e35d2f29edc99d570",
+            "balance": "5928484.50374172",
+            "decimals": 8,
+            "name": "Wrapped DAG",
+            "symbol": "wDAG",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "72446.514059",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "362232.570295"
+    },
+    {
+        "address": "0x1bccaac02bae336c6352acc3b772059ef1142fa7",
+        "id": "0x1bccaac02bae336c6352acc3b772059ef1142fa70002000000000000000001f0",
+        "poolType": "Weighted",
+        "swapFee": "0.001",
+        "tokens": [
+        {
+            "address": "0x79c71d3436f39ce382d0f58f1b011d88100b9d91",
+            "balance": "10169532.947757997160169639",
+            "decimals": 18,
+            "name": "Xeonbit Token",
+            "symbol": "XNS",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "54.196973166651092192",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "351356.8286897324304784780337609887"
+    },
+    {
+        "address": "0xaac98ee71d4f8a156b6abaa6844cdb7789d086ce",
+        "id": "0xaac98ee71d4f8a156b6abaa6844cdb7789d086ce00020000000000000000001b",
+        "poolType": "Weighted",
+        "swapFee": "0.0026",
+        "tokens": [
+        {
+            "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+            "balance": "198.035977966721764561",
+            "decimals": 18,
+            "name": "",
+            "symbol": "",
+            "weight": "0.6"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "50.13511468573688505",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.4"
+        }
+        ],
+        "totalLiquidity": "329686.463481532969200763006949911"
+    },
+    {
+        "address": "0x072f14b85add63488ddad88f855fda4a99d6ac9b",
+        "id": "0x072f14b85add63488ddad88f855fda4a99d6ac9b000200000000000000000027",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+            "balance": "148070.81135803137898109",
+            "decimals": 18,
+            "name": "Synthetix Network Token",
+            "symbol": "SNX",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "55.678044762517549463",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "297354.2960775421434908972176551418"
+    },
+    {
+        "address": "0xe8cc7e765647625b95f59c15848379d10b9ab4af",
+        "id": "0xe8cc7e765647625b95f59c15848379d10b9ab4af0002000000000000000001de",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "22.344261257758328154",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xf203ca1769ca8e9e8fe1da9d147db68b6c919817",
+            "balance": "8313527.020151842512176589",
+            "decimals": 18,
+            "name": "Wrapped NCG",
+            "symbol": "WNCG",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "293904.3620655635103938673243611419"
+    },
+    {
+        "address": "0x42fbd9f666aacc0026ca1b88c94259519e03dd67",
+        "id": "0x42fbd9f666aacc0026ca1b88c94259519e03dd67000200000000000000000507",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x823e1b82ce1dc147bbdb25a203f046afab1ce918",
+            "balance": "230458.796187013403775186",
+            "decimals": 18,
+            "name": "Coil",
+            "symbol": "COIL",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "140189.066735",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "280378.13347"
+    },
+    {
+        "address": "0x4e1325ff075a387e3d337f5f12638d6d72b12780",
+        "id": "0x4e1325ff075a387e3d337f5f12638d6d72b127800001000000000000000006d7",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x0001a500a6b18995b03f44bb040a5ffc28e45cb0",
+            "balance": "117870.281235440012165147",
+            "decimals": 18,
+            "name": "Autonolas",
+            "symbol": "OLAS",
+            "weight": "0.25"
+        },
+        {
+            "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "balance": "0.6820729",
+            "decimals": 8,
+            "name": "Wrapped BTC",
+            "symbol": "WBTC",
+            "weight": "0.25"
+        },
+        {
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "balance": "65249.184381334512903071",
+            "decimals": 18,
+            "name": "Dai Stablecoin",
+            "symbol": "DAI",
+            "weight": "0.25"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "24.911525731806543346",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.25"
+        }
+        ],
+        "totalLiquidity": "260190.0842852476100885839847295545"
+    },
+    {
+        "address": "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8",
+        "id": "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8000200000000000000000019",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "104287.671304",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "39.266841598242057254",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "208575.342608"
+    },
+    {
+        "address": "0x3e09e828c716c5e2bc5034eed7d5ec8677ffba18",
+        "id": "0x3e09e828c716c5e2bc5034eed7d5ec8677ffba180002000000000000000002b1",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x8888801af4d980682e47f1a9036e589479e835c5",
+            "balance": "405680.925049818691123945",
+            "decimals": 18,
+            "name": "88mph.app",
+            "symbol": "MPH",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "15.912998006151839576",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "208459.3909765025810112648717587715"
+    },
+    {
+        "address": "0x0b09dea16768f0799065c475be02919503cb2a35",
+        "id": "0x0b09dea16768f0799065c475be02919503cb2a3500020000000000000000001a",
+        "poolType": "Weighted",
+        "swapFee": "0.0005",
+        "tokens": [
+        {
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "balance": "76140.492170173271997206",
+            "decimals": 18,
+            "name": "Dai Stablecoin",
+            "symbol": "DAI",
+            "weight": "0.4"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "42.987689019299344532",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.6"
+        }
+        ],
+        "totalLiquidity": "190351.230425433179993015"
+    },
+    {
+        "address": "0x93ab2afded588a9e7f3ef569834b13685d612f96",
+        "id": "0x93ab2afded588a9e7f3ef569834b13685d612f96000200000000000000000095",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x965d79f1a1016b574a62986e13ca8ab04dfdd15c",
+            "balance": "708384533.191516083499852873",
+            "decimals": 18,
+            "name": "M2",
+            "symbol": "M2",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "14.065218649084269781",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "189438.9561310564711401572124807551"
+    },
+    {
+        "address": "0x68e3266c9c8bbd44ad9dca5afbfe629022aee9fe",
+        "id": "0x68e3266c9c8bbd44ad9dca5afbfe629022aee9fe000200000000000000000512",
+        "poolType": "Weighted",
+        "swapFee": "0.0004",
+        "tokens": [
+        {
+            "address": "0x198d7387fa97a73f05b8578cdeff8f2a1f34cd1f",
+            "balance": "167098.629765204213617729",
+            "decimals": 18,
+            "name": "Wrapped Jones AURA",
+            "symbol": "wjAURA",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "11.680196469012674772",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "153536.7036834883983558116052144042"
+    },
+    {
+        "address": "0x57766212638c425e9cb0c6d6e1683dda369c0fff",
+        "id": "0x57766212638c425e9cb0c6d6e1683dda369c0fff000200000000000000000678",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x0447d3454b25935eed47f65b4bd22b9b23be326a",
+            "balance": "7235094.931964574800935359",
+            "decimals": 18,
+            "name": "GEM ",
+            "symbol": "GEM",
+            "weight": "0.8"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "9.142254896351260004",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        }
+        ],
+        "totalLiquidity": "150574.1216930579780282514696993944"
+    },
+    {
+        "address": "0xf506984c16737b1a9577cadeda02a49fd612aff8",
+        "id": "0xf506984c16737b1a9577cadeda02a49fd612aff80002000000000000000002a9",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x35e78b3982e87ecfd5b3f3265b601c046cdbe232",
+            "balance": "335500.451742239827845081",
+            "decimals": 18,
+            "name": "SideShift Token",
+            "symbol": "XAI",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "68768.484348",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "137536.968696"
+    },
+    {
+        "address": "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36",
+        "id": "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36000200000000000000000194",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "balance": "0.27151217",
+            "decimals": 8,
+            "name": "Wrapped BTC",
+            "symbol": "WBTC",
+            "weight": "0.2"
+        },
+        {
+            "address": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+            "balance": "29920.729958352159237273",
+            "decimals": 18,
+            "name": "Badger",
+            "symbol": "BADGER",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "130767.2149934823421001974666338439"
+    },
+    {
+        "address": "0xdbc4f138528b6b893cbcc3fd9c15d8b34d0554ae",
+        "id": "0xdbc4f138528b6b893cbcc3fd9c15d8b34d0554ae0002000000000000000003bf",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0x4a220e6096b25eadb88358cb44068a3248254675",
+            "balance": "1052.454097726131946957",
+            "decimals": 18,
+            "name": "Quant",
+            "symbol": "QNT",
+            "weight": "0.85"
+        },
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "balance": "16271.198233",
+            "decimals": 6,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "weight": "0.15"
+        }
+        ],
+        "totalLiquidity": "108474.6548866666666666666666666667"
+    },
+    {
+        "address": "0xea39581977325c0833694d51656316ef8a926a62",
+        "id": "0xea39581977325c0833694d51656316ef8a926a62000200000000000000000036",
+        "poolType": "Weighted",
+        "swapFee": "0.004",
+        "tokens": [
+        {
+            "address": "0x1cf0f3aabe4d12106b27ab44df5473974279c524",
+            "balance": "126905.621392417218045672",
+            "decimals": 18,
+            "name": "xSNX",
+            "symbol": "xSNXa",
+            "weight": "0.75"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "9.8482898356994092",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.25"
+        }
+        ],
+        "totalLiquidity": "100386.8907256582021444673273381843"
+    },
+    {
+        "address": "0xc5c91aea7551095c3e1ff0f94f682c45b347ad73",
+        "id": "0xc5c91aea7551095c3e1ff0f94f682c45b347ad730002000000000000000006c0",
+        "poolType": "Weighted",
+        "swapFee": "0.01",
+        "tokens": [
+        {
+            "address": "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56",
+            "balance": "7345.420478974688432251",
+            "decimals": 18,
+            "name": "Balancer 80 BAL 20 WETH",
+            "symbol": "B-80BAL-20WETH",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "18.953940701200249425",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "99106.11710971311435344146276958933"
+    },
+    {
+        "address": "0x9137f3a026fa419a7a9a0ba8df6601d4b0abfd26",
+        "id": "0x9137f3a026fa419a7a9a0ba8df6601d4b0abfd260002000000000000000001ab",
+        "poolType": "Weighted",
+        "swapFee": "0.003",
+        "tokens": [
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "balance": "7.192968001810834322",
+            "decimals": 18,
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "weight": "0.2"
+        },
+        {
+            "address": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+            "balance": "426365.943818838553188182",
+            "decimals": 18,
+            "name": "Biconomy Token",
+            "symbol": "BICO",
+            "weight": "0.8"
+        }
+        ],
+        "totalLiquidity": "94892.67366314083550584560413905997"
+    },
+    {
+        "address": "0x9f9d900462492d4c21e9523ca95a7cd86142f298",
+        "id": "0x9f9d900462492d4c21e9523ca95a7cd86142f298000200000000000000000462",
+        "poolType": "Weighted",
+        "swapFee": "0.0025",
+        "tokens": [
+        {
+            "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+            "balance": "14.602820512947821719",
+            "decimals": 18,
+            "name": "Rocket Pool ETH",
+            "symbol": "rETH",
+            "weight": "0.5"
+        },
+        {
+            "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+            "balance": "4651.01768514682902913",
+            "decimals": 18,
+            "name": "Rocket Pool Protocol",
+            "symbol": "RPL",
+            "weight": "0.5"
+        }
+        ],
+        "totalLiquidity": "84523.46629802365653795989112506121"
+    }
+    ]
+}

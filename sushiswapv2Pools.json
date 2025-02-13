@@ -1,404 +1,953 @@
 {
-    "liquidityPools": [
-    {
-        "id": "0x878d54052941ce2a37c32a69c73054594a304f65",
-        "totalValueLockedUSD": "4063683412.588766162534067700093602"
-    },
-    {
-        "id": "0xe45de45953ec51c8dc0510a3a8d151236a7099c8",
-        "totalValueLockedUSD": "888138005.6047576625927302446792938"
-    },
-    {
-        "id": "0x89fa2fd7dd529d70912b434269843389c5575822",
-        "totalValueLockedUSD": "153651635.6908276523666029337553719"
-    },
-    {
-        "id": "0x9ea56195cfeffde9957df9f33ab4642e202fb40e",
-        "totalValueLockedUSD": "139769985.7266217217151418509747452"
-    },
-    {
-        "id": "0x4234fdc6c354805236498bce11420a7ceae7ffcf",
-        "totalValueLockedUSD": "78779073.44507152375302738523858382"
-    },
-    {
-        "id": "0xd21dfb6e05e60e14cef9a5cf875065bccd5ed790",
-        "totalValueLockedUSD": "64414029.89895609341902787792654453"
-    },
-    {
-        "id": "0x29aca1c369e00e0a9107b326126d2f80ffda211e",
-        "totalValueLockedUSD": "39535540.35316893096209002413209232"
-    },
-    {
-        "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
-        "totalValueLockedUSD": "28134138.69761363376347689029721579"
-    },
-    {
-        "id": "0x397ff1542f962076d0bfe58ea045ffa2d347aca0",
-        "totalValueLockedUSD": "10393075.5396564367840257874503278"
-    },
-    {
-        "id": "0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f",
-        "totalValueLockedUSD": "9285286.485961883517799204984624802"
-    },
-    {
-        "id": "0x6a091a3406e0073c3cd6340122143009adac0eda",
-        "totalValueLockedUSD": "9249566.198016747695302949522662331"
-    },
-    {
-        "id": "0x55d31f68975e446a40a2d02ffa4b0e1bfb233c2f",
-        "totalValueLockedUSD": "4661749.252220409247259361167389772"
-    },
-    {
-        "id": "0x0463a06fbc8bf28b3f120cd1bfc59483f099d332",
-        "totalValueLockedUSD": "4486595.712890120650999384015827519"
-    },
-    {
-        "id": "0x1498bd576454159bb81b5ce532692a8752d163e8",
-        "totalValueLockedUSD": "3509486.328045172800625311800867886"
-    },
-    {
-        "id": "0x795065dcc9f64b5614c407a6efdc400da6221fb0",
-        "totalValueLockedUSD": "3364701.490906522055815714897307014"
-    },
-    {
-        "id": "0xc3f279090a47e80990fe3a9c30d24cb117ef91a8",
-        "totalValueLockedUSD": "2696905.006244373503445197105662346"
-    },
-    {
-        "id": "0x4a86c01d67965f8cb3d0aaa2c655705e64097c31",
-        "totalValueLockedUSD": "2509896.375778451189562338561547031"
-    },
-    {
-        "id": "0x4c48ad6dda341696a380fc8dc6ae153fc863fa57",
-        "totalValueLockedUSD": "1818675.092598167614822149540939431"
-    },
-    {
-        "id": "0xc40d16476380e4037e6b1a2594caf6a6cc8da967",
-        "totalValueLockedUSD": "1810221.801754665381704564650393671"
-    },
-    {
-        "id": "0x06da0fd433c1a5d7a4faa01111c044910a184553",
-        "totalValueLockedUSD": "1738844.603226037038324070493269615"
-    },
-    {
-        "id": "0xd4e7a6e2d03e4e48dfc27dd3f46df1c176647e38",
-        "totalValueLockedUSD": "1384127.453370888064152752885036948"
-    },
-    {
-        "id": "0xc152f19b74206eb1900ccf7e382cdd04d558b132",
-        "totalValueLockedUSD": "1357483.619157579318479176696583732"
-    },
-    {
-        "id": "0x15a8e38942f9e353bec8812763fb3c104c89ecf4",
-        "totalValueLockedUSD": "1154582.083614946809391425415513683"
-    },
-    {
-        "id": "0x9461173740d27311b176476fa27e94c681b1ea6b",
-        "totalValueLockedUSD": "671739.7537330929492502329568390155"
-    },
-    {
-        "id": "0x1e888882d0f291dd88c5605108c72d414f29d460",
-        "totalValueLockedUSD": "625296.9618501433914482333455769216"
-    },
-    {
-        "id": "0xeefa3b448768dd561af4f743c9e925987a1f8d09",
-        "totalValueLockedUSD": "609788.4861438566449591840216338269"
-    },
-    {
-        "id": "0xd1c625e5152b3238ae600f75635fc5e0d9eae518",
-        "totalValueLockedUSD": "602228.526215380011808259269798424"
-    },
-    {
-        "id": "0xc7175038323562cb68e4bbdd379e9fe65134937f",
-        "totalValueLockedUSD": "574695.227767423342602837075257215"
-    },
-    {
-        "id": "0x7cf6a842e72c4bd7bc92e0c17ebdaa95ac1e7825",
-        "totalValueLockedUSD": "548357.6395356189891305270372901107"
-    },
-    {
-        "id": "0xfb3cd0b8a5371fe93ef92e3988d30df7931e2820",
-        "totalValueLockedUSD": "508922.2555656813870981091369234947"
-    },
-    {
-        "id": "0xe12af1218b4e9272e9628d7c7dc6354d137d024e",
-        "totalValueLockedUSD": "496755.1229441355344332074904693518"
-    },
-    {
-        "id": "0x7825de5586e4d2fd04459091bbe783fa243e1bf3",
-        "totalValueLockedUSD": "481567.6276460284458431073872900861"
-    },
-    {
-        "id": "0x3d3f13f2529ec3c84b2940155effbf9b39a8f3ec",
-        "totalValueLockedUSD": "476306.7163167803678150826982952258"
-    },
-    {
-        "id": "0x45b6ffb13e5206dafe2cc8780e4ddc0e32496265",
-        "totalValueLockedUSD": "468111.4586806936761101362533656133"
-    },
-    {
-        "id": "0x9cd028b1287803250b1e226f0180eb725428d069",
-        "totalValueLockedUSD": "464515.4933452586026288554027391231"
-    },
-    {
-        "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
-        "totalValueLockedUSD": "455309.9744084909452250132029599781"
-    },
-    {
-        "id": "0x99b42f2b49c395d2a77d973f6009abb5d67da343",
-        "totalValueLockedUSD": "434964.4760760259475913243388434706"
-    },
-    {
-        "id": "0xb5de0c3753b6e1b4dba616db82767f17513e6d4e",
-        "totalValueLockedUSD": "415850.5352422172932265506179430861"
-    },
-    {
-        "id": "0x36e2fcccc59e5747ff63a03ea2e5c0c2c14911e7",
-        "totalValueLockedUSD": "414248.7374314159799441604740551688"
-    },
-    {
-        "id": "0x088ee5007c98a9677165d78dd2109ae4a3d04d0c",
-        "totalValueLockedUSD": "403975.678824926027029065288615442"
-    },
-    {
-        "id": "0xe339c1d0a744053cbceb0d2dc2d13967c8a69586",
-        "totalValueLockedUSD": "399355.1197259239336026075750748407"
-    },
-    {
-        "id": "0x10b47177e92ef9d5c6059055d92ddf6290848991",
-        "totalValueLockedUSD": "394965.1330268757416945686271070121"
-    },
-    {
-        "id": "0x93e2f3a8277e0360081547d711446e4a1f83546d",
-        "totalValueLockedUSD": "379631.6030444694847810557837708518"
-    },
-    {
-        "id": "0xaf988aff99d3d0cb870812c325c588d8d8cb7de8",
-        "totalValueLockedUSD": "360600.7316785910881386307495900642"
-    },
-    {
-        "id": "0x2708e51009ffefc7e271cae5d7d74b9af61bcf5f",
-        "totalValueLockedUSD": "342295.4128395555296035451795509375"
-    },
-    {
-        "id": "0xf1f85b2c54a2bd284b1cf4141d64fd171bd85539",
-        "totalValueLockedUSD": "337581.428135916335464314991468221"
-    },
-    {
-        "id": "0xd3bbb7fb340c0ea4c0c0b60f35a6ac2b116679e3",
-        "totalValueLockedUSD": "328754.9076998364821133604235469513"
-    },
-    {
-        "id": "0x05767d9ef41dc40689678ffca0608878fb3de906",
-        "totalValueLockedUSD": "322758.3701500032309066097997149317"
-    },
-    {
-        "id": "0x9d45081706102e7aaddd0973268457527722e274",
-        "totalValueLockedUSD": "311877.08646853092197636029084874"
-    },
-    {
-        "id": "0x69d4f0e72a9de650dd3fe1f185ed3bf1e9e7e3ed",
-        "totalValueLockedUSD": "308426.9966292182360886450879056709"
-    },
-    {
-        "id": "0xba13afecda9beb75de5c56bbaf696b880a5a50dd",
-        "totalValueLockedUSD": "305652.8934130597963765571392961002"
-    },
-    {
-        "id": "0xee35e548c7457fcdd51ae95ed09108be660ea374",
-        "totalValueLockedUSD": "288220.4643450820679616675080997807"
-    },
-    {
-        "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
-        "totalValueLockedUSD": "286729.6441234785634282296824727896"
-    },
-    {
-        "id": "0x481ddaf90c59d91f3e480e6793122e62612ca5a9",
-        "totalValueLockedUSD": "279217.183582240833753815284890918"
-    },
-    {
-        "id": "0x5a70513ec742ebbfb99094c7fd3096a0a3e25b86",
-        "totalValueLockedUSD": "272002.9199604647555681038528389374"
-    },
-    {
-        "id": "0xa1181481beb2dc5de0daf2c85392d81c704bf75d",
-        "totalValueLockedUSD": "267896.5724015420753673239983955105"
-    },
-    {
-        "id": "0x82917fb0dd65b0e5c85eea66e4f5c1ed484bc629",
-        "totalValueLockedUSD": "260052.2795347586361859059788393007"
-    },
-    {
-        "id": "0x2980bfad83d889617cc9a019d1c9a18dd5722504",
-        "totalValueLockedUSD": "248921.903578842410334170878981032"
-    },
-    {
-        "id": "0x58dc5a51fe44589beb22e8ce67720b5bc5378009",
-        "totalValueLockedUSD": "231683.2465858353529766015509099805"
-    },
-    {
-        "id": "0xf7ac1f571856d7dbfbb56728c48823a2a19e4326",
-        "totalValueLockedUSD": "227583.8216173640290116667671505109"
-    },
-    {
-        "id": "0xcb2286d9471cc185281c4f763d34a962ed212962",
-        "totalValueLockedUSD": "218569.2456513054506955373028834137"
-    },
-    {
-        "id": "0xd6931cf24c05afd3c01016ce8a881b6c127e0c30",
-        "totalValueLockedUSD": "215033.2922369018926510078746867678"
-    },
-    {
-        "id": "0x753f33c13fe44d41a8cc6ac202a6de6c53c58b6a",
-        "totalValueLockedUSD": "206339.1619561663505188924546833555"
-    },
-    {
-        "id": "0xf55c33d94150d93c2cfb833bcca30be388b14964",
-        "totalValueLockedUSD": "201303.4097954478780587080598997988"
-    },
-    {
-        "id": "0xa2d81bedf22201a77044cdf3ab4d9dc1ffbc391b",
-        "totalValueLockedUSD": "190251.3073971977503015989902146517"
-    },
-    {
-        "id": "0xa75f7c2f025f470355515482bde9efa8153536a8",
-        "totalValueLockedUSD": "184696.3152863879386737796923928417"
-    },
-    {
-        "id": "0x644d6944666a92e65a3d41250a646e72f4203bb9",
-        "totalValueLockedUSD": "180975.2473110733366253700804076167"
-    },
-    {
-        "id": "0x5c596c6a65f628fc1090853d8eb1927651e9d9b2",
-        "totalValueLockedUSD": "172156.8385325526421215381850508099"
-    },
-    {
-        "id": "0xd227083b6feb1a40a975d74575311fb907fb960f",
-        "totalValueLockedUSD": "165678.4168069060764743854514241286"
-    },
-    {
-        "id": "0x0a2f9b5360b5c7b6d3ce826971425b3b8b766519",
-        "totalValueLockedUSD": "164171.0493820675805843183849235163"
-    },
-    {
-        "id": "0x22b15c7ee1186a7c7cffb2d942e20fc228f6e4ed",
-        "totalValueLockedUSD": "162147.7617130832541796093102413381"
-    },
-    {
-        "id": "0xc4b26b26d720467d96e18f08664a888d4116cea6",
-        "totalValueLockedUSD": "158400.1842298132299555232836193431"
-    },
-    {
-        "id": "0x557b08a0cab46bfe22471b65522757ea92a9e7a5",
-        "totalValueLockedUSD": "156096.2436708963316246770799746798"
-    },
-    {
-        "id": "0x195b2ed7dfb2bb19c63b8b06677d46934c0c4eea",
-        "totalValueLockedUSD": "156036.4924040627374191832567264251"
-    },
-    {
-        "id": "0x001b6450083e531a5a7bf310bd2c1af4247e23d4",
-        "totalValueLockedUSD": "150624.7082964796012136083627138247"
-    },
-    {
-        "id": "0x31503dcb60119a812fee820bb7042752019f2355",
-        "totalValueLockedUSD": "144875.3974003183607301863983727179"
-    },
-    {
-        "id": "0x698abbbc986c59d02941e18bc96fe2396493339b",
-        "totalValueLockedUSD": "142991.2325892267475682482435432383"
-    },
-    {
-        "id": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
-        "totalValueLockedUSD": "138739.8464140247173295801503509103"
-    },
-    {
-        "id": "0x1f44e67eb4b8438efe62847affb5b8e528e3f465",
-        "totalValueLockedUSD": "130950.2691933276107188899545961775"
-    },
-    {
-        "id": "0x559ebe4e206e6b4d50e9bd3008cda7ce640c52cb",
-        "totalValueLockedUSD": "129160.1679328416182718046402572114"
-    },
-    {
-        "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
-        "totalValueLockedUSD": "120958.8699383718522858253490396918"
-    },
-    {
-        "id": "0xc51a5a005179e9d80aedf9d245fbf1d8a8d5b754",
-        "totalValueLockedUSD": "119788.6569080163301070501884253856"
-    },
-    {
-        "id": "0x269db91fc3c7fcc275c2e6f22e5552504512811c",
-        "totalValueLockedUSD": "117889.7714882328497717454230098583"
-    },
-    {
-        "id": "0x18cd890f4e23422dc4aa8c2d6e0bd3f3bd8873d8",
-        "totalValueLockedUSD": "117060.8138699450022696564083356139"
-    },
-    {
-        "id": "0x544bae615939dca4b65a10e7511fda0068cc9ba1",
-        "totalValueLockedUSD": "116745.9758111808829181997127171557"
-    },
-    {
-        "id": "0x15e86e6f65ef7ea1dbb72a5e51a07926fb1c82e3",
-        "totalValueLockedUSD": "108100.8554850526867505427578025527"
-    },
-    {
-        "id": "0x8d782c5806607e9aafb2ac38c1da3838edf8bd03",
-        "totalValueLockedUSD": "105486.9831171093364061247999981673"
-    },
-    {
-        "id": "0x7f00853ad928abd68feaf4072a11a9587b974041",
-        "totalValueLockedUSD": "104699.1746404295392444840376896306"
-    },
-    {
-        "id": "0x82dbc2673e9640343d263a3c55de49021ad39ae2",
-        "totalValueLockedUSD": "104598.6718984199005111362178614848"
-    },
-    {
-        "id": "0x37922c69b08babcceae735a31235c81f1d1e8e43",
-        "totalValueLockedUSD": "103477.4186867503904362127051554729"
-    },
-    {
-        "id": "0x60bce13608701789ab9c8faa9b82de115ea8744d",
-        "totalValueLockedUSD": "102445.917781529253526098240749557"
-    },
-    {
-        "id": "0xbdd292a8ac7d426820bd0819c697b31c152c9ae6",
-        "totalValueLockedUSD": "102056.522748"
-    },
-    {
-        "id": "0xea59a3da9cad8ece406a353ddede0e7d17604d28",
-        "totalValueLockedUSD": "100706.4950630744308540349142262135"
-    },
-    {
-        "id": "0x18c12a654f982f68a91e8e6a4170ca1fcb9d60a2",
-        "totalValueLockedUSD": "97600.19563846997414004234555185384"
-    },
-    {
-        "id": "0x5b64c8d934b5e180cf1ca814584c2655d81c5b5c",
-        "totalValueLockedUSD": "96868.81206054006528979057541188254"
-    },
-    {
-        "id": "0x2a11ccfb96223bd35ec24b2aac046fcc85035f3d",
-        "totalValueLockedUSD": "96734.57281097798398520433509485854"
-    },
-    {
-        "id": "0x7f517657496c09c43cc28d0ca131e35dcd557e02",
-        "totalValueLockedUSD": "96494.33352938638583350704397505841"
-    },
-    {
-        "id": "0xec8c342bc3e07f05b9a782bc34e7f04fb9b44502",
-        "totalValueLockedUSD": "96077.02153383679247809373058319985"
-    },
-    {
-        "id": "0x4a73d94683f2c9c2aaf32ccd5723f3e243d6a654",
-        "totalValueLockedUSD": "93716.57807132491513902574962124204"
-    },
-    {
-        "id": "0xf169cea51eb51774cf107c88309717dda20be167",
-        "totalValueLockedUSD": "93031.58686445388186623071936696454"
-    }
+    "pools": [
+        {
+            "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+            "token0": {
+                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+                "symbol": "WBTC",
+                "decimals": 8
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x397ff1542f962076d0bfe58ea045ffa2d347aca0",
+            "token0": {
+                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "symbol": "USDC",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f",
+            "token0": {
+                "id": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+                "symbol": "DAI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x6a091a3406e0073c3cd6340122143009adac0eda",
+            "token0": {
+                "id": "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
+                "symbol": "ILV",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x55d31f68975e446a40a2d02ffa4b0e1bfb233c2f",
+            "token0": {
+                "id": "0x0000000000095413afC295d19EDeb1Ad7B71c952",
+                "symbol": "LON",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "symbol": "USDT",
+                "decimals": 6
+            }
+        },
+        {
+            "id": "0x0463a06fbc8bf28b3f120cd1bfc59483f099d332",
+            "token0": {
+                "id": "0x269616D549D7e8Eaa82DFb17028d0B212D11232A",
+                "symbol": "PUNK",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x1498bd576454159bb81b5ce532692a8752d163e8",
+            "token0": {
+                "id": "0x9EA3b5b4EC044b70375236A281986106457b20EF",
+                "symbol": "DELTA",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x795065dcc9f64b5614c407a6efdc400da6221fb0",
+            "token0": {
+                "id": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+                "symbol": "SUSHI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc3f279090a47e80990fe3a9c30d24cb117ef91a8",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF",
+                "symbol": "ALCX",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x4a86c01d67965f8cb3d0aaa2c655705e64097c31",
+            "token0": {
+                "id": "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
+                "symbol": "SYN",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc40d16476380e4037e6b1a2594caf6a6cc8da967",
+            "token0": {
+                "id": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+                "symbol": "LINK",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x06da0fd433c1a5d7a4faa01111c044910a184553",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "symbol": "USDT",
+                "decimals": 6
+            }
+        },
+        {
+            "id": "0xd4e7a6e2d03e4e48dfc27dd3f46df1c176647e38",
+            "token0": {
+                "id": "0x2e9d63788249371f1DFC918a52f8d799F4a38C94",
+                "symbol": "TOKE",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x15a8e38942f9e353bec8812763fb3c104c89ecf4",
+            "token0": {
+                "id": "0x227c7DF69D3ed1ae7574A1a7685fDEd90292EB48",
+                "symbol": "MILADY",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x9461173740d27311b176476fa27e94c681b1ea6b",
+            "token0": {
+                "id": "0x9d409a0A012CFbA9B15F6D4B36Ac57A46966Ab9a",
+                "symbol": "yvBOOST",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x1e888882d0f291dd88c5605108c72d414f29d460",
+            "token0": {
+                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "symbol": "USDC",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xbA8A621b4a54e61C442F5Ec623687e2a942225ef",
+                "symbol": "QUARTZ",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xeefa3b448768dd561af4f743c9e925987a1f8d09",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xDFDb7f72c1F195C5951a234e8DB9806EB0635346",
+                "symbol": "NFD",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc7175038323562cb68e4bbdd379e9fe65134937f",
+            "token0": {
+                "id": "0x4Af698B479D0098229DC715655c667Ceb6cd8433",
+                "symbol": "$MAID",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x7cf6a842e72c4bd7bc92e0c17ebdaa95ac1e7825",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xe76C6c83af64e4C60245D8C7dE953DF673a7A33D",
+                "symbol": "RAIL",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xfb3cd0b8a5371fe93ef92e3988d30df7931e2820",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30",
+                "symbol": "INJ",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xe12af1218b4e9272e9628d7c7dc6354d137d024e",
+            "token0": {
+                "id": "0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5",
+                "symbol": "BIT",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x7825de5586e4d2fd04459091bbe783fa243e1bf3",
+            "token0": {
+                "id": "0x50D1c9771902476076eCFc8B2A83Ad6b9355a4c9",
+                "symbol": "FTX Token",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x3d3f13f2529ec3c84b2940155effbf9b39a8f3ec",
+            "token0": {
+                "id": "0xa5f2211B9b8170F694421f2046281775E8468044",
+                "symbol": "THOR",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x45b6ffb13e5206dafe2cc8780e4ddc0e32496265",
+            "token0": {
+                "id": "0x60bE1e1fE41c1370ADaF5d8e66f07Cf1C2Df2268",
+                "symbol": "PERC",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x9cd028b1287803250b1e226f0180eb725428d069",
+            "token0": {
+                "id": "0x903bEF1736CDdf2A537176cf3C64579C3867A881",
+                "symbol": "ICHI",
+                "decimals": 9
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x99b42f2b49c395d2a77d973f6009abb5d67da343",
+            "token0": {
+                "id": "0x25f8087EAD173b73D6e8B84329989A8eEA16CF73",
+                "symbol": "YGG",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xb5de0c3753b6e1b4dba616db82767f17513e6d4e",
+            "token0": {
+                "id": "0x090185f2135308BaD17527004364eBcC2D37e5F6",
+                "symbol": "SPELL",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x36e2fcccc59e5747ff63a03ea2e5c0c2c14911e7",
+            "token0": {
+                "id": "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272",
+                "symbol": "xSUSHI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x088ee5007c98a9677165d78dd2109ae4a3d04d0c",
+            "token0": {
+                "id": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
+                "symbol": "YFI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xe339c1d0a744053cbceb0d2dc2d13967c8a69586",
+            "token0": {
+                "id": "0x641927E970222B10b2E8CDBC96b1B4F427316f16",
+                "symbol": "MEEB",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x10b47177e92ef9d5c6059055d92ddf6290848991",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xc5bDdf9843308380375a611c18B50Fb9341f502A",
+                "symbol": "yveCRV-DAO",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x93e2f3a8277e0360081547d711446e4a1f83546d",
+            "token0": {
+                "id": "0x6399C842dD2bE3dE30BF99Bc7D1bBF6Fa3650E70",
+                "symbol": "PREMIA",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xaf988aff99d3d0cb870812c325c588d8d8cb7de8",
+            "token0": {
+                "id": "0x1cEB5cB57C4D4E2b2433641b95Dd330A33185A44",
+                "symbol": "KP3R",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xf1f85b2c54a2bd284b1cf4141d64fd171bd85539",
+            "token0": {
+                "id": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
+                "symbol": "sUSD",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xd3bbb7fb340c0ea4c0c0b60f35a6ac2b116679e3",
+            "token0": {
+                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "symbol": "USDC",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xf98AB0874b13a7Fdc39D7295DEdd49850A5D426B",
+                "symbol": "KIRA",
+                "decimals": 8
+            }
+        },
+        {
+            "id": "0x05767d9ef41dc40689678ffca0608878fb3de906",
+            "token0": {
+                "id": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+                "symbol": "CVX",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x9d45081706102e7aaddd0973268457527722e274",
+            "token0": {
+                "id": "0x579CEa1889991f68aCc35Ff5c3dd0621fF29b0C9",
+                "symbol": "IQ",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xee35e548c7457fcdd51ae95ed09108be660ea374",
+            "token0": {
+                "id": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+                "symbol": "OCEAN",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
+            "token0": {
+                "id": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "symbol": "UNI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x481ddaf90c59d91f3e480e6793122e62612ca5a9",
+            "token0": {
+                "id": "0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9",
+                "symbol": "FLOAT",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x5a70513ec742ebbfb99094c7fd3096a0a3e25b86",
+            "token0": {
+                "id": "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b",
+                "symbol": "WFLOW",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xa1181481beb2dc5de0daf2c85392d81c704bf75d",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+                "symbol": "ENS",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x82917fb0dd65b0e5c85eea66e4f5c1ed484bc629",
+            "token0": {
+                "id": "0x65Ef703f5594D2573eb71Aaf55BC0CB548492df4",
+                "symbol": "MULTI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x2980bfad83d889617cc9a019d1c9a18dd5722504",
+            "token0": {
+                "id": "0x55332170Cb7d36545B500f66a80291C83d40Bba7",
+                "symbol": "LFG",
+                "decimals": 9
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x58dc5a51fe44589beb22e8ce67720b5bc5378009",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+                "symbol": "CRV",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xf7ac1f571856d7dbfbb56728c48823a2a19e4326",
+            "token0": {
+                "id": "0x3E828ac5C480069D4765654Fb4b8733b910b13b2",
+                "symbol": "CLNY",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "symbol": "USDC",
+                "decimals": 6
+            }
+        },
+        {
+            "id": "0xcb2286d9471cc185281c4f763d34a962ed212962",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xD46bA6D942050d489DBd938a2C909A5d5039A161",
+                "symbol": "AMPL",
+                "decimals": 9
+            }
+        },
+        {
+            "id": "0xd6931cf24c05afd3c01016ce8a881b6c127e0c30",
+            "token0": {
+                "id": "0xa35Bd2246978Dfbb1980DFf8Ff0f5834335dFdbc",
+                "symbol": "REMIO",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x753f33c13fe44d41a8cc6ac202a6de6c53c58b6a",
+            "token0": {
+                "id": "0x0acC0FEE1D86D2cD5AF372615bf59b298D50cd69",
+                "symbol": "ILSI",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xf55c33d94150d93c2cfb833bcca30be388b14964",
+            "token0": {
+                "id": "0xa1faa113cbE53436Df28FF0aEe54275c13B40975",
+                "symbol": "ALPHA",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xa2d81bedf22201a77044cdf3ab4d9dc1ffbc391b",
+            "token0": {
+                "id": "0x96E61422b6A9bA0e068B6c5ADd4fFaBC6a4aae27",
+                "symbol": "ibEUR",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xa75f7c2f025f470355515482bde9efa8153536a8",
+            "token0": {
+                "id": "0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55",
+                "symbol": "BAND",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x5c596c6a65f628fc1090853d8eb1927651e9d9b2",
+            "token0": {
+                "id": "0x9AB7bb7FdC60f4357ECFef43986818A2A3569c62",
+                "symbol": "GOG",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x0a2f9b5360b5c7b6d3ce826971425b3b8b766519",
+            "token0": {
+                "id": "0x87931E7AD81914e7898d07c68F145fC0A553D8Fb",
+                "symbol": "WIZARD",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x22b15c7ee1186a7c7cffb2d942e20fc228f6e4ed",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xCB56b52316041A62B6b5D0583DcE4A8AE7a3C629",
+                "symbol": "CIG",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc4b26b26d720467d96e18f08664a888d4116cea6",
+            "token0": {
+                "id": "0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1",
+                "symbol": "UFT",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x557b08a0cab46bfe22471b65522757ea92a9e7a5",
+            "token0": {
+                "id": "0xAE12C5930881c53715B369ceC7606B70d8EB229f",
+                "symbol": "C98",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x195b2ed7dfb2bb19c63b8b06677d46934c0c4eea",
+            "token0": {
+                "id": "0x44017598f2AF1bD733F9D87b5017b4E7c1B28DDE",
+                "symbol": "stkATOM",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x001b6450083e531a5a7bf310bd2c1af4247e23d4",
+            "token0": {
+                "id": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
+                "symbol": "UMA",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x31503dcb60119a812fee820bb7042752019f2355",
+            "token0": {
+                "id": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+                "symbol": "COMP",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x698abbbc986c59d02941e18bc96fe2396493339b",
+            "token0": {
+                "id": "0x8d137e3337eb1B58A222Fef2B2Cc7C423903d9cf",
+                "symbol": "SQGL",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x559ebe4e206e6b4d50e9bd3008cda7ce640c52cb",
+            "token0": {
+                "id": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
+                "symbol": "RADAR",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
+            "token0": {
+                "id": "0x87d73E916D7057945c9BcD8cdd94e42A6F47f776",
+                "symbol": "NFTX",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xc51a5a005179e9d80aedf9d245fbf1d8a8d5b754",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xd3E4Ba569045546D09CF021ECC5dFe42b1d7f6E4",
+                "symbol": "MNW",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x269db91fc3c7fcc275c2e6f22e5552504512811c",
+            "token0": {
+                "id": "0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5",
+                "symbol": "PICKLE",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x18cd890f4e23422dc4aa8c2d6e0bd3f3bd8873d8",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF",
+                "symbol": "IMX",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x15e86e6f65ef7ea1dbb72a5e51a07926fb1c82e3",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xfF20817765cB7f73d4bde2e66e067E58D11095C2",
+                "symbol": "AMP",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x7f00853ad928abd68feaf4072a11a9587b974041",
+            "token0": {
+                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "symbol": "USDC",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xd2320df6602B5D0BAEA496d2697291a2264150A4",
+                "symbol": "HJHRE",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x82dbc2673e9640343d263a3c55de49021ad39ae2",
+            "token0": {
+                "id": "0x1559FA1b8F28238FD5D76D9f434ad86FD20D1559",
+                "symbol": "EDEN",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x37922c69b08babcceae735a31235c81f1d1e8e43",
+            "token0": {
+                "id": "0x808507121B80c02388fAd14726482e061B8da827",
+                "symbol": "PENDLE",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0x60bce13608701789ab9c8faa9b82de115ea8744d",
+            "token0": {
+                "id": "0x35a532d376FFd9a705d0Bb319532837337A398E7",
+                "symbol": "WDOGE",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xbdd292a8ac7d426820bd0819c697b31c152c9ae6",
+            "token0": {
+                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "symbol": "USDT",
+                "decimals": 6
+            },
+            "token1": {
+                "id": "0xea7Cc765eBC94C4805e3BFf28D7E4aE48D06468A",
+                "symbol": "PAD",
+                "decimals": 18
+            }
+        },
+        {
+            "id": "0xea59a3da9cad8ece406a353ddede0e7d17604d28",
+            "token0": {
+                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "symbol": "WETH",
+                "decimals": 18
+            },
+            "token1": {
+                "id": "0xEe7527841A932d2912224E20a405e1a1FF747084",
+                "symbol": "SHX",
+                "decimals": 7
+            }
+        }
     ]
 }

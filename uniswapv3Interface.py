@@ -62,6 +62,19 @@ QUOTER_ABI = [
   }
 ]
 
+# Define ERC-20 contract ABI (simplified)
+ERC20_ABI = [
+    {
+        "constant": True,
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [{"name": "", "type": "uint8"}],
+        "payable": False,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
+
 # Uniswap V3 QuoterV2 address (Mainnet)
 QUOTER_ADDRESS = "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6"
 QUOTER_V2_ADDRESS = "0x61fFE014bA17989E743c5F6cB21bF9697530B21e"
@@ -218,5 +231,193 @@ for pool in pools:
         symbolsToPairs[token1["symbol"]] = 0
     symbolsToPairs[token1["symbol"]] += 1
 
-for (i, (key, value)) in enumerate(sorted(symbolsToPairs.items(), key=lambda item: item[1])):
-    print(f"{len(symbolsToPairs)-i}. {key}: {value}")
+# Load the JSON file
+with open('sushiswapv2Pools.json', 'r') as file:
+    sushi_data = json.load(file)
+# Loop through each sushiswap pool pair and extract relevant information
+sushi_pools = sushi_data.get("pools", [])
+for pool in sushi_pools:
+    token0 = pool["token0"]
+    token1 = pool["token1"]
+
+    if token0["symbol"] not in symbolsToPairs.keys():
+        symbolsToPairs[token0["symbol"]] = 0
+    symbolsToPairs[token0["symbol"]] += 1
+
+    if token1["symbol"] not in symbolsToPairs.keys():
+        symbolsToPairs[token1["symbol"]] = 0
+    symbolsToPairs[token1["symbol"]] += 1
+
+# Load the JSON file
+with open('balancerv2Pools.json', 'r') as file:
+    bal_data = json.load(file)
+# Loop through each sushiswap pool pair and extract relevant information
+bal_pools = bal_data.get("pools", [])
+for pool in bal_pools:    
+    # Extract token data
+    tokens = pool['tokens']
+    symbols = [token["symbol"] for token in tokens]
+
+    for symbol in symbols:   
+        if symbol not in symbolsToPairs.keys():
+            symbolsToPairs[symbol] = 0
+        symbolsToPairs[symbol] += 1
+
+new_data = {
+    "edges": []
+}
+
+## NOW GO THROUGH AND ADD TO NEW CONSOLIDATED FILE
+
+# Read and parse the JSON data
+uniswapv3_data = read_json_from_file("uniswapv3Pools.json")
+uniswapv2_data = read_json_from_file("uniswapv2Pools.json")
+sushiswapv2_data = read_json_from_file("sushiswapv2Pools.json")
+balancer_data = read_json_from_file("balancerv2Pools.json")
+
+# Access the pools data
+uniswapv3_pools = uniswapv3_data.get("pools", [])
+uniswapv2_pools = uniswapv2_data['pairs']
+sushiswap_pools = sushiswapv2_data.get("pools", [])
+balancer_pools = balancer_data.get("pools", [])
+
+# Loop through each v2 pool pair and extract relevant information
+for pair in uniswapv2_pools:
+    token0_symbol = pair['token0']['symbol']
+    token1_symbol = pair['token1']['symbol']
+    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+        continue
+    
+    # Create ERC-20 contract instances for token0 and token1
+    token0_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token0']['id']), abi=ERC20_ABI)
+    token1_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token1']['id']), abi=ERC20_ABI)
+
+    # Get decimals for token0 and token1
+    token0_decimals = token0_contract.functions.decimals().call()
+    token1_decimals = token1_contract.functions.decimals().call()
+    new_data["edges"].append({
+        "id": pair["id"],
+        "token0": {
+            "id": pair['token0']['id'],
+            "symbol": token0_symbol,
+            "decimals": token0_decimals
+        },
+        "token1": {
+            "id": pair['token1']['id'],
+            "symbol": token1_symbol,
+            "decimals": token1_decimals
+        },
+        "dex": "UNISWAP_V2",
+        "fee": 0.003,
+    })
+
+# Loop through each v3 pool pair and extract relevant information
+for pool in uniswapv3_pools:
+    token0 = pool["token0"]
+    token1 = pool["token1"]
+
+    token0_symbol = token0["symbol"]
+    token1_symbol = token1["symbol"]
+
+    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+        continue
+
+    token0_decimals = int(token0["decimals"])
+    token1_decimals = int(token1["decimals"])
+
+    fee = int(pool["feeTier"])/1000000.0
+
+    new_data["edges"].append({
+        "id": pair["id"],
+        "token0": {
+            "id": token0['id'],
+            "symbol": token0_symbol,
+            "decimals": token0_decimals
+        },
+        "token1": {
+            "id": token1['id'],
+            "symbol": token1_symbol,
+            "decimals": token1_decimals
+        },
+        "dex": "UNISWAP_V3",
+        "fee": fee,
+    })
+
+for pool in sushiswap_pools:
+    token0_symbol = pool['token0']['symbol']
+    token1_symbol = pool['token1']['symbol']
+    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+        continue
+
+    # Get decimals for token0 and token1
+    token0_decimals = pool["token0"]["decimals"]
+    token1_decimals = pool["token1"]["decimals"]
+
+    new_data["edges"].append({
+        "id": pool["id"],
+        "token0": {
+            "id": pool['token0']['id'],
+            "symbol": token0_symbol,
+            "decimals": token0_decimals
+        },
+        "token1": {
+            "id": pool['token1']['id'],
+            "symbol": token1_symbol,
+            "decimals": token1_decimals
+        },
+        "dex": "SUSHISWAP",
+        "fee": 0.003,
+    })
+
+for pool in balancer_pools:    
+    pool_id = pool['id']
+    swap_fee = float(pool["swapFee"])
+
+    # Extract token data
+    tokens = pool['tokens']
+    addresses = [token["address"] for token in tokens]
+    weights = [float(token['weight']) for token in tokens]
+    symbols = [token["symbol"] for token in tokens]
+    decimals = [token["decimals"] for token in tokens]
+
+    for start in range(len(tokens)-1): ## 0, 1, 2
+        for end in range(start+1, len(tokens)): ## 1, 2, 3
+            token0_symbol = symbols[start]
+            token1_symbol = symbols[end]
+            if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+                continue
+
+            token0_decimals = decimals[start]
+            token1_decimals = decimals[end]
+
+            token0_address = addresses[start]
+            token1_address = addresses[end]
+
+            token0_weight = weights[start]
+            token1_weight = weights[end]
+
+            new_data["edges"].append({
+                "id": pool_id,
+                "token0": {
+                    "id": token0_address,
+                    "symbol": token0_symbol,
+                    "decimals": token0_decimals,
+                    "weight": token0_weight
+                },
+                "token1": {
+                    "id": token1_address,
+                    "symbol": token1_symbol,
+                    "decimals": token1_decimals,
+                    "weight": token1_weight
+                },
+                "dex": "BALANCER",
+                "fee": swap_fee,
+            })
+
+# Specify the filename
+filename = "./edges.json"
+
+# Write data to the JSON file
+with open(filename, "w") as file:
+    json.dump(new_data, file, indent=4)
+
