@@ -144,21 +144,22 @@ def parse_uniswap_pools(json_data):
         try:
             token1Amount = get_uniswap_v3_quote(token0Address, token1Address, fee_tier, token0Amount)
         except Exception as e:
+            print("issue")
             continue
 
         slippagePrice = (float(token1Amount)/float(token0Amount)) * 10**(int(token0['decimals']) - int(token1['decimals']))  
-        print(f"Pool ID: {pool_id}")
-        print(f"  Fee Tier: {(fee_tier / 1e6) * 100:.2f}%")
-        print(f"  Trade Volume (USD): ${volume_usd:,.2f}")
-        print(f"  Transactions Count: {tx_count}")
-        print(f"  Token 0: {token0['symbol']} ({token0['name']}) - Decimals: {token0['decimals']}")
-        print(f"  Token 1: {token1['symbol']} ({token1['name']}) - Decimals: {token1['decimals']}")
-        print(f"  Current Price: {current_price:.10f} {token1['symbol']} per {token0['symbol']}")
-        print(f"                 {(1/current_price):.10f} {token0['symbol']} per {token1['symbol']}")
-        print(f"${dollars} trade slippage:")
-        print(f"               : {slippagePrice:.10f} {token1['symbol']} per {token0['symbol']}")
-        print(f"     % slippage: {(current_price - slippagePrice)/current_price*100}%")
-        print("-" * 60)
+        # print(f"Pool ID: {pool_id}")
+        # print(f"  Fee Tier: {(fee_tier / 1e6) * 100:.2f}%")
+        # print(f"  Trade Volume (USD): ${volume_usd:,.2f}")
+        # print(f"  Transactions Count: {tx_count}")
+        # print(f"  Token 0: {token0['symbol']} ({token0['name']}) - Decimals: {token0['decimals']}")
+        # print(f"  Token 1: {token1['symbol']} ({token1['name']}) - Decimals: {token1['decimals']}")
+        # print(f"  Current Price: {current_price:.10f} {token1['symbol']} per {token0['symbol']}")
+        # print(f"                 {(1/current_price):.10f} {token0['symbol']} per {token1['symbol']}")
+        # print(f"${dollars} trade slippage:")
+        # print(f"               : {slippagePrice:.10f} {token1['symbol']} per {token0['symbol']}")
+        # print(f"     % slippage: {(current_price - slippagePrice)/current_price*100}%")
+        # print("-" * 60)
 
 def get_uniswap_v3_quote(token_in, token_out, fee_tier, amount_in):
     """
@@ -189,235 +190,235 @@ def read_json_from_file(file_path):
         return json.load(file)
 
 # Path to your JSON file
-json_file_path = "uniswapv3Pools.json"  # Replace with the path to your JSON file
+json_file_path = "./archivePoolData/uniswapv3Pools.json"  # Replace with the path to your JSON file
 
 # Read and parse the JSON data
 json_data = read_json_from_file(json_file_path)
 # # Call the function
-# parse_uniswap_pools(json_data)
+parse_uniswap_pools(json_data)
 
-# Load the JSON file
-with open('uniswapv2Pools.json', 'r') as file:
-    data = json.load(file)
+# # Load the JSON file
+# with open('uniswapv2Pools.json', 'r') as file:
+#     data = json.load(file)
 
-# Access the pairs data
-pairs = data['pairs']
+# # Access the pairs data
+# pairs = data['pairs']
 
-symbolsToPairs = {}
+# symbolsToPairs = {}
 
-# Loop through each v2 pool pair and extract relevant information
-for pair in pairs:
-    token0_symbol = pair['token0']['symbol']
-    token1_symbol = pair['token1']['symbol']
-    if token0_symbol not in symbolsToPairs.keys():
-        symbolsToPairs[token0_symbol] = 0
-    symbolsToPairs[token0_symbol] += 1
+# # Loop through each v2 pool pair and extract relevant information
+# for pair in pairs:
+#     token0_symbol = pair['token0']['symbol']
+#     token1_symbol = pair['token1']['symbol']
+#     if token0_symbol not in symbolsToPairs.keys():
+#         symbolsToPairs[token0_symbol] = 0
+#     symbolsToPairs[token0_symbol] += 1
 
-    if token1_symbol not in symbolsToPairs.keys():
-        symbolsToPairs[token1_symbol] = 0
-    symbolsToPairs[token1_symbol] += 1
+#     if token1_symbol not in symbolsToPairs.keys():
+#         symbolsToPairs[token1_symbol] = 0
+#     symbolsToPairs[token1_symbol] += 1
 
-# Loop through each v3 pool pair and extract relevant information
-pools = json_data.get("pools", [])
-for pool in pools:
-    token0 = pool["token0"]
-    token1 = pool["token1"]
+# # Loop through each v3 pool pair and extract relevant information
+# pools = json_data.get("pools", [])
+# for pool in pools:
+#     token0 = pool["token0"]
+#     token1 = pool["token1"]
 
-    if token0["symbol"] not in symbolsToPairs.keys():
-        symbolsToPairs[token0["symbol"]] = 0
-    symbolsToPairs[token0["symbol"]] += 1
+#     if token0["symbol"] not in symbolsToPairs.keys():
+#         symbolsToPairs[token0["symbol"]] = 0
+#     symbolsToPairs[token0["symbol"]] += 1
 
-    if token1["symbol"] not in symbolsToPairs.keys():
-        symbolsToPairs[token1["symbol"]] = 0
-    symbolsToPairs[token1["symbol"]] += 1
+#     if token1["symbol"] not in symbolsToPairs.keys():
+#         symbolsToPairs[token1["symbol"]] = 0
+#     symbolsToPairs[token1["symbol"]] += 1
 
-# Load the JSON file
-with open('sushiswapv2Pools.json', 'r') as file:
-    sushi_data = json.load(file)
-# Loop through each sushiswap pool pair and extract relevant information
-sushi_pools = sushi_data.get("pools", [])
-for pool in sushi_pools:
-    token0 = pool["token0"]
-    token1 = pool["token1"]
+# # Load the JSON file
+# with open('sushiswapv2Pools.json', 'r') as file:
+#     sushi_data = json.load(file)
+# # Loop through each sushiswap pool pair and extract relevant information
+# sushi_pools = sushi_data.get("pools", [])
+# for pool in sushi_pools:
+#     token0 = pool["token0"]
+#     token1 = pool["token1"]
 
-    if token0["symbol"] not in symbolsToPairs.keys():
-        symbolsToPairs[token0["symbol"]] = 0
-    symbolsToPairs[token0["symbol"]] += 1
+#     if token0["symbol"] not in symbolsToPairs.keys():
+#         symbolsToPairs[token0["symbol"]] = 0
+#     symbolsToPairs[token0["symbol"]] += 1
 
-    if token1["symbol"] not in symbolsToPairs.keys():
-        symbolsToPairs[token1["symbol"]] = 0
-    symbolsToPairs[token1["symbol"]] += 1
+#     if token1["symbol"] not in symbolsToPairs.keys():
+#         symbolsToPairs[token1["symbol"]] = 0
+#     symbolsToPairs[token1["symbol"]] += 1
 
-# Load the JSON file
-with open('balancerv2Pools.json', 'r') as file:
-    bal_data = json.load(file)
-# Loop through each sushiswap pool pair and extract relevant information
-bal_pools = bal_data.get("pools", [])
-for pool in bal_pools:    
-    # Extract token data
-    tokens = pool['tokens']
-    symbols = [token["symbol"] for token in tokens]
+# # Load the JSON file
+# with open('balancerv2Pools.json', 'r') as file:
+#     bal_data = json.load(file)
+# # Loop through each sushiswap pool pair and extract relevant information
+# bal_pools = bal_data.get("pools", [])
+# for pool in bal_pools:    
+#     # Extract token data
+#     tokens = pool['tokens']
+#     symbols = [token["symbol"] for token in tokens]
 
-    for symbol in symbols:   
-        if symbol not in symbolsToPairs.keys():
-            symbolsToPairs[symbol] = 0
-        symbolsToPairs[symbol] += 1
+#     for symbol in symbols:   
+#         if symbol not in symbolsToPairs.keys():
+#             symbolsToPairs[symbol] = 0
+#         symbolsToPairs[symbol] += 1
 
-new_data = {
-    "edges": []
-}
+# new_data = {
+#     "edges": []
+# }
 
-## NOW GO THROUGH AND ADD TO NEW CONSOLIDATED FILE
+# ## NOW GO THROUGH AND ADD TO NEW CONSOLIDATED FILE
 
-# Read and parse the JSON data
-uniswapv3_data = read_json_from_file("uniswapv3Pools.json")
-uniswapv2_data = read_json_from_file("uniswapv2Pools.json")
-sushiswapv2_data = read_json_from_file("sushiswapv2Pools.json")
-balancer_data = read_json_from_file("balancerv2Pools.json")
+# # Read and parse the JSON data
+# uniswapv3_data = read_json_from_file("uniswapv3Pools.json")
+# uniswapv2_data = read_json_from_file("uniswapv2Pools.json")
+# sushiswapv2_data = read_json_from_file("sushiswapv2Pools.json")
+# balancer_data = read_json_from_file("balancerv2Pools.json")
 
-# Access the pools data
-uniswapv3_pools = uniswapv3_data.get("pools", [])
-uniswapv2_pools = uniswapv2_data['pairs']
-sushiswap_pools = sushiswapv2_data.get("pools", [])
-balancer_pools = balancer_data.get("pools", [])
+# # Access the pools data
+# uniswapv3_pools = uniswapv3_data.get("pools", [])
+# uniswapv2_pools = uniswapv2_data['pairs']
+# sushiswap_pools = sushiswapv2_data.get("pools", [])
+# balancer_pools = balancer_data.get("pools", [])
 
-# Loop through each v2 pool pair and extract relevant information
-for pair in uniswapv2_pools:
-    token0_symbol = pair['token0']['symbol']
-    token1_symbol = pair['token1']['symbol']
-    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
-        continue
+# # Loop through each v2 pool pair and extract relevant information
+# for pair in uniswapv2_pools:
+#     token0_symbol = pair['token0']['symbol']
+#     token1_symbol = pair['token1']['symbol']
+#     if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+#         continue
     
-    # Create ERC-20 contract instances for token0 and token1
-    token0_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token0']['id']), abi=ERC20_ABI)
-    token1_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token1']['id']), abi=ERC20_ABI)
+#     # Create ERC-20 contract instances for token0 and token1
+#     token0_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token0']['id']), abi=ERC20_ABI)
+#     token1_contract = web3.eth.contract(address=Web3.to_checksum_address(pair['token1']['id']), abi=ERC20_ABI)
 
-    # Get decimals for token0 and token1
-    token0_decimals = token0_contract.functions.decimals().call()
-    token1_decimals = token1_contract.functions.decimals().call()
-    new_data["edges"].append({
-        "id": pair["id"],
-        "token0": {
-            "id": pair['token0']['id'],
-            "symbol": token0_symbol,
-            "decimals": token0_decimals
-        },
-        "token1": {
-            "id": pair['token1']['id'],
-            "symbol": token1_symbol,
-            "decimals": token1_decimals
-        },
-        "dex": "UNISWAP_V2",
-        "fee": 0.003,
-    })
+#     # Get decimals for token0 and token1
+#     token0_decimals = token0_contract.functions.decimals().call()
+#     token1_decimals = token1_contract.functions.decimals().call()
+#     new_data["edges"].append({
+#         "id": pair["id"],
+#         "token0": {
+#             "id": pair['token0']['id'],
+#             "symbol": token0_symbol,
+#             "decimals": token0_decimals
+#         },
+#         "token1": {
+#             "id": pair['token1']['id'],
+#             "symbol": token1_symbol,
+#             "decimals": token1_decimals
+#         },
+#         "dex": "UNISWAP_V2",
+#         "fee": 0.003,
+#     })
 
-# Loop through each v3 pool pair and extract relevant information
-for pool in uniswapv3_pools:
-    token0 = pool["token0"]
-    token1 = pool["token1"]
+# # Loop through each v3 pool pair and extract relevant information
+# for pool in uniswapv3_pools:
+#     token0 = pool["token0"]
+#     token1 = pool["token1"]
 
-    token0_symbol = token0["symbol"]
-    token1_symbol = token1["symbol"]
+#     token0_symbol = token0["symbol"]
+#     token1_symbol = token1["symbol"]
 
-    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
-        continue
+#     if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+#         continue
 
-    token0_decimals = int(token0["decimals"])
-    token1_decimals = int(token1["decimals"])
+#     token0_decimals = int(token0["decimals"])
+#     token1_decimals = int(token1["decimals"])
 
-    fee = int(pool["feeTier"])/1000000.0
+#     fee = int(pool["feeTier"])/1000000.0
 
-    new_data["edges"].append({
-        "id": pair["id"],
-        "token0": {
-            "id": token0['id'],
-            "symbol": token0_symbol,
-            "decimals": token0_decimals
-        },
-        "token1": {
-            "id": token1['id'],
-            "symbol": token1_symbol,
-            "decimals": token1_decimals
-        },
-        "dex": "UNISWAP_V3",
-        "fee": fee,
-    })
+#     new_data["edges"].append({
+#         "id": pool["id"],
+#         "token0": {
+#             "id": token0['id'],
+#             "symbol": token0_symbol,
+#             "decimals": token0_decimals
+#         },
+#         "token1": {
+#             "id": token1['id'],
+#             "symbol": token1_symbol,
+#             "decimals": token1_decimals
+#         },
+#         "dex": "UNISWAP_V3",
+#         "fee": fee,
+#     })
 
-for pool in sushiswap_pools:
-    token0_symbol = pool['token0']['symbol']
-    token1_symbol = pool['token1']['symbol']
-    if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
-        continue
+# for pool in sushiswap_pools:
+#     token0_symbol = pool['token0']['symbol']
+#     token1_symbol = pool['token1']['symbol']
+#     if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+#         continue
 
-    # Get decimals for token0 and token1
-    token0_decimals = pool["token0"]["decimals"]
-    token1_decimals = pool["token1"]["decimals"]
+#     # Get decimals for token0 and token1
+#     token0_decimals = pool["token0"]["decimals"]
+#     token1_decimals = pool["token1"]["decimals"]
 
-    new_data["edges"].append({
-        "id": pool["id"],
-        "token0": {
-            "id": pool['token0']['id'],
-            "symbol": token0_symbol,
-            "decimals": token0_decimals
-        },
-        "token1": {
-            "id": pool['token1']['id'],
-            "symbol": token1_symbol,
-            "decimals": token1_decimals
-        },
-        "dex": "SUSHISWAP",
-        "fee": 0.003,
-    })
+#     new_data["edges"].append({
+#         "id": pool["id"],
+#         "token0": {
+#             "id": pool['token0']['id'],
+#             "symbol": token0_symbol,
+#             "decimals": token0_decimals
+#         },
+#         "token1": {
+#             "id": pool['token1']['id'],
+#             "symbol": token1_symbol,
+#             "decimals": token1_decimals
+#         },
+#         "dex": "SUSHISWAP",
+#         "fee": 0.003,
+#     })
 
-for pool in balancer_pools:    
-    pool_id = pool['id']
-    swap_fee = float(pool["swapFee"])
+# for pool in balancer_pools:    
+#     pool_id = pool['id']
+#     swap_fee = float(pool["swapFee"])
 
-    # Extract token data
-    tokens = pool['tokens']
-    addresses = [token["address"] for token in tokens]
-    weights = [float(token['weight']) for token in tokens]
-    symbols = [token["symbol"] for token in tokens]
-    decimals = [token["decimals"] for token in tokens]
+#     # Extract token data
+#     tokens = pool['tokens']
+#     addresses = [token["address"] for token in tokens]
+#     weights = [float(token['weight']) for token in tokens]
+#     symbols = [token["symbol"] for token in tokens]
+#     decimals = [token["decimals"] for token in tokens]
 
-    for start in range(len(tokens)-1): ## 0, 1, 2
-        for end in range(start+1, len(tokens)): ## 1, 2, 3
-            token0_symbol = symbols[start]
-            token1_symbol = symbols[end]
-            if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
-                continue
+#     for start in range(len(tokens)-1): ## 0, 1, 2
+#         for end in range(start+1, len(tokens)): ## 1, 2, 3
+#             token0_symbol = symbols[start]
+#             token1_symbol = symbols[end]
+#             if symbolsToPairs[token0_symbol] < 2 or symbolsToPairs[token1_symbol] < 2:
+#                 continue
 
-            token0_decimals = decimals[start]
-            token1_decimals = decimals[end]
+#             token0_decimals = decimals[start]
+#             token1_decimals = decimals[end]
 
-            token0_address = addresses[start]
-            token1_address = addresses[end]
+#             token0_address = addresses[start]
+#             token1_address = addresses[end]
 
-            token0_weight = weights[start]
-            token1_weight = weights[end]
+#             token0_weight = weights[start]
+#             token1_weight = weights[end]
 
-            new_data["edges"].append({
-                "id": pool_id,
-                "token0": {
-                    "id": token0_address,
-                    "symbol": token0_symbol,
-                    "decimals": token0_decimals,
-                    "weight": token0_weight
-                },
-                "token1": {
-                    "id": token1_address,
-                    "symbol": token1_symbol,
-                    "decimals": token1_decimals,
-                    "weight": token1_weight
-                },
-                "dex": "BALANCER",
-                "fee": swap_fee,
-            })
+#             new_data["edges"].append({
+#                 "id": pool_id,
+#                 "token0": {
+#                     "id": token0_address,
+#                     "symbol": token0_symbol,
+#                     "decimals": token0_decimals,
+#                     "weight": token0_weight
+#                 },
+#                 "token1": {
+#                     "id": token1_address,
+#                     "symbol": token1_symbol,
+#                     "decimals": token1_decimals,
+#                     "weight": token1_weight
+#                 },
+#                 "dex": "BALANCER",
+#                 "fee": swap_fee,
+#             })
 
-# Specify the filename
-filename = "./edges.json"
+# # Specify the filename
+# filename = "./edges.json"
 
-# Write data to the JSON file
-with open(filename, "w") as file:
-    json.dump(new_data, file, indent=4)
+# # Write data to the JSON file
+# with open(filename, "w") as file:
+#     json.dump(new_data, file, indent=4)
 
