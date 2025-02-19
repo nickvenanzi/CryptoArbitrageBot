@@ -901,21 +901,6 @@
             "fee": 0.003
         },
         {
-            "id": "0x582e3da39948c6339433008703211ad2c13eb2ac",
-            "token0": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
-                "decimals": 18
-            },
-            "token1": {
-                "id": "0xd233D1f6FD11640081aBB8db125f722b5dc729dc",
-                "symbol": "USD",
-                "decimals": 9
-            },
-            "dex": "UNISWAP_V2",
-            "fee": 0.003
-        },
-        {
             "id": "0xae461ca67b15dc8dc81ce7615e0320da1a9ab8d5",
             "token0": {
                 "id": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
@@ -3761,21 +3746,6 @@
                 "id": "0xfb130d93E49DcA13264344966A611dc79a456Bc5",
                 "symbol": "DOGEGF",
                 "decimals": 18
-            },
-            "dex": "UNISWAP_V2",
-            "fee": 0.003
-        },
-        {
-            "id": "0x50b6071561f068963bcfe2b341126cd6accafafb",
-            "token0": {
-                "id": "0xd233D1f6FD11640081aBB8db125f722b5dc729dc",
-                "symbol": "USD",
-                "decimals": 9
-            },
-            "token1": {
-                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-                "symbol": "USDT",
-                "decimals": 6
             },
             "dex": "UNISWAP_V2",
             "fee": 0.003
@@ -6751,21 +6721,6 @@
             "fee": 0.0001
         },
         {
-            "id": "0x87428a53e14d24ab19c6ca4939b4df93b8996ca9",
-            "token0": {
-                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-                "symbol": "WBTC",
-                "decimals": 8
-            },
-            "token1": {
-                "id": "0x8236a87084f8B84306f72007F36F2618A5634494",
-                "symbol": "LBTC",
-                "decimals": 8
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0005
-        },
-        {
             "id": "0x99132b53ab44694eeb372e87bced3929e4ab8456",
             "token0": {
                 "id": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
@@ -8461,21 +8416,6 @@
             "fee": 0.003
         },
         {
-            "id": "0x5aa1356999821b533ec5d9f79c23b8cb7c295c61",
-            "token0": {
-                "id": "0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd",
-                "symbol": "GUSD",
-                "decimals": 2
-            },
-            "token1": {
-                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-                "symbol": "USDC",
-                "decimals": 6
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0005
-        },
-        {
             "id": "0x975c822e26a514e7a1b75be587aefc738a73eee7",
             "token0": {
                 "id": "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
@@ -8876,21 +8816,6 @@
                 "id": "0xd3E4Ba569045546D09CF021ECC5dFe42b1d7f6E4",
                 "symbol": "MNW",
                 "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.003
-        },
-        {
-            "id": "0x93f267fd92b432bebf4da4e13b8615bb8eb2095c",
-            "token0": {
-                "id": "0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd",
-                "symbol": "GUSD",
-                "decimals": 2
-            },
-            "token1": {
-                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-                "symbol": "USDC",
-                "decimals": 6
             },
             "dex": "UNISWAP_V3",
             "fee": 0.003
@@ -9584,21 +9509,6 @@
             },
             "dex": "UNISWAP_V3",
             "fee": 0.003
-        },
-        {
-            "id": "0x6546055f46e866a4b9a4a13e81273e3152bae5da",
-            "token0": {
-                "id": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-                "symbol": "XAUt",
-                "decimals": 6
-            },
-            "token1": {
-                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-                "symbol": "USDT",
-                "decimals": 6
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0005
         },
         {
             "id": "0x9496d107a4b90c7d18c703e8685167f90ac273b0",
@@ -13801,21 +13711,6 @@
             "fee": 0.003
         },
         {
-            "id": "0xc5c7c21f4e60770ca5991a8832127a40f5236f73",
-            "token0": {
-                "id": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-                "symbol": "XAUt",
-                "decimals": 6
-            },
-            "token1": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
-                "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.003
-        },
-        {
             "id": "0x8e4318e2cb1ae291254b187001a59a1f8ac78cef",
             "token0": {
                 "id": "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
@@ -14440,21 +14335,6 @@
             "token1": {
                 "id": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
                 "symbol": "EIGEN",
-                "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.01
-        },
-        {
-            "id": "0xeba623e4f5c7735427a9ef491ecee082dd4bf6ce",
-            "token0": {
-                "id": "0x30aE41D5f9988D359c733232C6c693c0e645C77E",
-                "symbol": "WAAC",
-                "decimals": 0
-            },
-            "token1": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
                 "decimals": 18
             },
             "dex": "UNISWAP_V3",
@@ -17881,21 +17761,6 @@
             "fee": 0.0005
         },
         {
-            "id": "0x0b599ebf4e05af48b56d38e2dde520570c366460",
-            "token0": {
-                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-                "symbol": "WBTC",
-                "decimals": 8
-            },
-            "token1": {
-                "id": "0x8236a87084f8B84306f72007F36F2618A5634494",
-                "symbol": "LBTC",
-                "decimals": 8
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0001
-        },
-        {
             "id": "0x63818bbdd21e69be108a23ac1e84cbf66399bd7d",
             "token0": {
                 "id": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
@@ -19276,21 +19141,6 @@
             "fee": 0.01
         },
         {
-            "id": "0x3a32f5040bc4d8417e78e236eb2c48c90e003fda",
-            "token0": {
-                "id": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
-                "symbol": "uniBTC",
-                "decimals": 8
-            },
-            "token1": {
-                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-                "symbol": "WBTC",
-                "decimals": 8
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0005
-        },
-        {
             "id": "0x57b9394323fc58b724c06722ed299f3c5ce87131",
             "token0": {
                 "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -19589,21 +19439,6 @@
             },
             "dex": "UNISWAP_V3",
             "fee": 0.0005
-        },
-        {
-            "id": "0xa91f80380d9cc9c86eb98d2965a0ded9e2000791",
-            "token0": {
-                "id": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-                "symbol": "XAUt",
-                "decimals": 6
-            },
-            "token1": {
-                "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-                "symbol": "USDT",
-                "decimals": 6
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.003
         },
         {
             "id": "0x3a0f221ea8b150f3d3d27de8928851ab5264bb65",
@@ -21841,21 +21676,6 @@
             "fee": 0.003
         },
         {
-            "id": "0x49eb1545e5e04a5d1591cf08068d306ad01bc524",
-            "token0": {
-                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-                "symbol": "USDC",
-                "decimals": 6
-            },
-            "token1": {
-                "id": "0xb5588C411ba0bb7D38865fdC51D082d004e519F7",
-                "symbol": "WAIT",
-                "decimals": 0
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.01
-        },
-        {
             "id": "0xe9131a276fd07af729b5537a429346e8affc67e0",
             "token0": {
                 "id": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
@@ -22216,21 +22036,6 @@
             "fee": 0.003
         },
         {
-            "id": "0x109707ad4abd299b3cf6f2b011c2bff88523e2f0",
-            "token0": {
-                "id": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
-                "symbol": "uniBTC",
-                "decimals": 8
-            },
-            "token1": {
-                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-                "symbol": "WBTC",
-                "decimals": 8
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.01
-        },
-        {
             "id": "0xb6c0c11a34b7fd40a965af442c8599544b186d6b",
             "token0": {
                 "id": "0x0B9aE6b1D4f0EEeD904D1CEF68b9bd47499f3fFF",
@@ -22319,21 +22124,6 @@
             },
             "dex": "UNISWAP_V3",
             "fee": 0.0005
-        },
-        {
-            "id": "0x5e1aa95f07f413b16a30ecfd66935e49eb08a7fd",
-            "token0": {
-                "id": "0x783C68814126b66B9242C4c6538Ae47dB5e33169",
-                "symbol": "RODO",
-                "decimals": 2
-            },
-            "token1": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
-                "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0001
         },
         {
             "id": "0x3bc12d73d1ce8a4e85e1db8ccb1baf5ef6869348",
@@ -23234,21 +23024,6 @@
             },
             "dex": "UNISWAP_V3",
             "fee": 0.0001
-        },
-        {
-            "id": "0x2f60777945fc351abf9e9e733bc5a52809269dd7",
-            "token0": {
-                "id": "0xb5588C411ba0bb7D38865fdC51D082d004e519F7",
-                "symbol": "WAIT",
-                "decimals": 0
-            },
-            "token1": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
-                "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.01
         },
         {
             "id": "0xb26a868ffa4cbba926970d7ae9c6a36d088ee38c",
@@ -24659,21 +24434,6 @@
             },
             "dex": "UNISWAP_V3",
             "fee": 0.01
-        },
-        {
-            "id": "0x4ba950bed410a12c1294df28ed672f50c24297de",
-            "token0": {
-                "id": "0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd",
-                "symbol": "GUSD",
-                "decimals": 2
-            },
-            "token1": {
-                "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                "symbol": "WETH",
-                "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.003
         },
         {
             "id": "0x9ce9f90a9cd83abb36f3dd66c8eaf5446e2a6949",
@@ -27286,21 +27046,6 @@
             "fee": 0.003
         },
         {
-            "id": "0x0bebf49facd18d40915509cc1c0bc43fdc099269",
-            "token0": {
-                "id": "0x783C68814126b66B9242C4c6538Ae47dB5e33169",
-                "symbol": "RODO",
-                "decimals": 2
-            },
-            "token1": {
-                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-                "symbol": "USDC",
-                "decimals": 6
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.0001
-        },
-        {
             "id": "0x54514ee06c8c10029f631eafb0964573e554e319",
             "token0": {
                 "id": "0x808507121B80c02388fAd14726482e061B8da827",
@@ -27446,21 +27191,6 @@
                 "id": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
                 "symbol": "WETH",
                 "decimals": 18
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.01
-        },
-        {
-            "id": "0x8baca50cd0f8f68d759d588c4b7652c2047d4aba",
-            "token0": {
-                "id": "0x30aE41D5f9988D359c733232C6c693c0e645C77E",
-                "symbol": "WAAC",
-                "decimals": 0
-            },
-            "token1": {
-                "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-                "symbol": "USDC",
-                "decimals": 6
             },
             "dex": "UNISWAP_V3",
             "fee": 0.01
@@ -29965,21 +29695,6 @@
             "token1": {
                 "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
                 "symbol": "USDC",
-                "decimals": 6
-            },
-            "dex": "UNISWAP_V3",
-            "fee": 0.003
-        },
-        {
-            "id": "0xe8a1f39c16eea2844e98f951d711bb4bb31557ad",
-            "token0": {
-                "id": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-                "symbol": "WBTC",
-                "decimals": 8
-            },
-            "token1": {
-                "id": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-                "symbol": "XAUt",
                 "decimals": 6
             },
             "dex": "UNISWAP_V3",

@@ -189,13 +189,12 @@ while len(queue) > 0:
 
     if dex == "UNISWAP_V3":
         dollars = 10.0
-        amountIn = int((dollars / prices[startAddress]) * 10**startDecimals) # $ / ($/t0) = t0
-        params = {'tokenIn': startAddress,'tokenOut': endAddress,'amountIn': amountIn,'fee': int(fee*1000000),'sqrtPriceLimitX96': 0}
+        amountIn = int(dollars * 10**startDecimals / prices[startAddress]) # $ / ($/t0) = t0
+        params = {'tokenIn': startAddress,'tokenOut': endAddress,'amountIn': amountIn,'fee': round(fee*1000000),'sqrtPriceLimitX96': 0}
         try:
             amountOut = quoter_contract.functions.quoteExactInputSingle(params).call()[0]
             price = amountOut / amountIn
         except:
-            print(f"Issue with pool id: {pool_id}")
             continue
         T1perT0 = float(price) * 10.0**(startDecimals - endDecimals)
     elif dex == "UNISWAP_V2":
@@ -222,13 +221,10 @@ while len(queue) > 0:
             startWeight = token1["weight"]
             endWeight = token0["weight"]
         T1perT0 = (endBalance * startWeight) / (startBalance * endWeight) * 10**(startDecimals - endDecimals)
-    if T1perT0 < 1e-10:
+    if T1perT0 < 1e-15:
         print(f"Divide by zero: {pool_id}")
         continue
     prices[endAddress] = dollarsPerT0 / T1perT0 ## ($/t0) / (t1/t0) = ($/t1)
-
-for key, value in prices.items():
-    print(f"{key} ({symbols[key]}): ${value}")
 
 # Specify the filename
 filename = "./prices.json"
