@@ -14,12 +14,9 @@ with open('edges.json', 'r') as file:
 # Access the pools data
 edge_data = data.get("edges", [])
 
-volumes_usd = [10, 50, 100, 250, 500, 1000, 10000]
-edges = {}
-vertices = {}
-for volume in volumes_usd:
-    edges[volume] = []
-    vertices[volume] = set()
+volume_usd = 10
+edges = []
+vertices = set()
 
 ################# UNISWAP_V3 CONTRACT CODE ####################
 QUOTER_V2_ABI = [
@@ -52,6 +49,10 @@ quoter_contract = web3.eth.contract(address=QUOTER_V2_ADDRESS, abi=QUOTER_V2_ABI
 def get_uniswap_v3_weight(pool):
     token0 = pool["token0"]
     token1 = pool["token1"]
+
+    token0["price"] = prices[token0["id"]]
+    token1["price"] = prices[token1["id"]]
+    
     try:
         prices[token0["id"]]
     except:
@@ -62,41 +63,45 @@ def get_uniswap_v3_weight(pool):
     except:
         print(token1["id"])
         return
-    for volume_usd in volumes_usd:
-        amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
-        amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t1) = t1
-        try:  ## forward calculation
-            params_fwd = {'tokenIn': token0["id"],'tokenOut': token1["id"],'amountIn': amount_in_fwd,'fee': round(pool["fee"]*1000000),'sqrtPriceLimitX96': 0}
-            amount_out_fwd = quoter_contract.functions.quoteExactInputSingle(params_fwd).call()[0]
-            price_fwd = amount_out_fwd / amount_in_fwd
-            weight_fwd = -math.log10(price_fwd)
-            edges[volume_usd].append({
-                "start": token0,
-                "end": token1,
-                "weight": weight_fwd
-            })
-            if token0["id"] not in vertices[volume_usd]:
-                vertices[volume_usd].add(token0["id"])
-            if token1["id"] not in vertices[volume_usd]:
-                vertices[volume_usd].add(token1["id"])
-        except:
-            pass
-        try: ## backward calculation
-            params_bwd = {'tokenIn': token1["id"],'tokenOut': token0["id"],'amountIn': amount_in_bwd,'fee': round(pool["fee"]*1000000),'sqrtPriceLimitX96': 0}
-            amount_out_bwd = quoter_contract.functions.quoteExactInputSingle(params_bwd).call()[0]
-            price_bwd = amount_out_bwd / amount_in_bwd
-            weight_bwd = -math.log10(price_bwd)
-            edges[volume_usd].append({
-                "start": token1,
-                "end": token0,
-                "weight": weight_bwd
-            })
-            if token0["id"] not in vertices[volume_usd]:
-                vertices[volume_usd].add(token0["id"])
-            if token1["id"] not in vertices[volume_usd]:
-                vertices[volume_usd].add(token1["id"])
-        except:
-            pass
+
+    amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
+    amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t1) = t1
+    try:  ## forward calculation
+        params_fwd = {'tokenIn': token0["id"],'tokenOut': token1["id"],'amountIn': amount_in_fwd,'fee': round(pool["fee"]*1000000),'sqrtPriceLimitX96': 0}
+        amount_out_fwd = quoter_contract.functions.quoteExactInputSingle(params_fwd).call()[0]
+        price_fwd = amount_out_fwd / amount_in_fwd
+        weight_fwd = -math.log10(price_fwd)
+        edges.append({
+            "start": token0,
+            "end": token1,
+            "weight": weight_fwd,
+            "dex": pool["dex"],
+            "fee": pool["fee"]
+        })
+        if token0["id"] not in vertices:
+            vertices.add(token0["id"])
+        if token1["id"] not in vertices:
+            vertices.add(token1["id"])
+    except:
+        pass
+    try: ## backward calculation
+        params_bwd = {'tokenIn': token1["id"],'tokenOut': token0["id"],'amountIn': amount_in_bwd,'fee': round(pool["fee"]*1000000),'sqrtPriceLimitX96': 0}
+        amount_out_bwd = quoter_contract.functions.quoteExactInputSingle(params_bwd).call()[0]
+        price_bwd = amount_out_bwd / amount_in_bwd
+        weight_bwd = -math.log10(price_bwd)
+        edges.append({
+            "start": token1,
+            "end": token0,
+            "weight": weight_bwd,
+            "dex": pool["dex"],
+            "fee": pool["fee"]
+        })
+        if token0["id"] not in vertices:
+            vertices.add(token0["id"])
+        if token1["id"] not in vertices:
+            vertices.add(token1["id"])
+    except:
+        return
 ################# UNISWAP_V3 CONTRACT CODE ####################
 
 ################# UNISWAP_V2 CONTRACT CODE ####################
@@ -122,36 +127,46 @@ def get_uniswap_v2_weight(pair):
 
     token0 = pair["token0"]
     token1 = pair["token1"]
-    for volume_usd in volumes_usd:
-        amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
-        amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
 
-        amount_in_fwd_w_fee = amount_in_fwd * (1.0 - UNISWAP_V2_FEE)
-        amount_in_bwd_w_fee = amount_in_bwd * (1.0 - UNISWAP_V2_FEE)
+    amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
+    amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
 
-        amount_output_fwd = (amount_in_fwd_w_fee * reserve1) / (reserve0 + amount_in_fwd)
-        amount_output_bwd = (amount_in_bwd_w_fee * reserve0) / (reserve1 + amount_in_bwd)
+    amount_in_fwd_w_fee = amount_in_fwd * (1.0 - UNISWAP_V2_FEE)
+    amount_in_bwd_w_fee = amount_in_bwd * (1.0 - UNISWAP_V2_FEE)
 
-        price_fwd = amount_output_fwd / amount_in_fwd
-        price_bwd = amount_output_bwd / amount_in_bwd
+    amount_output_fwd = (amount_in_fwd_w_fee * reserve1) / (reserve0 + amount_in_fwd)
+    amount_output_bwd = (amount_in_bwd_w_fee * reserve0) / (reserve1 + amount_in_bwd)
 
-        weight_fwd = -math.log10(price_fwd)
-        weight_bwd = -math.log10(price_bwd)
+    price_fwd = amount_output_fwd / amount_in_fwd
+    price_bwd = amount_output_bwd / amount_in_bwd
 
-        edges[volume_usd].append({
-            "start": token0,
-            "end": token1,
-            "weight": weight_fwd
-        })
-        edges[volume_usd].append({
-            "start": token1,
-            "end": token0,
-            "weight": weight_bwd
-        })
-        if token0["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token0["id"])
-        if token1["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token1["id"])
+    weight_fwd = -math.log10(price_fwd)
+    weight_bwd = -math.log10(price_bwd)
+
+    token0["reserve"] = reserve0
+    token1["reserve"] = reserve1
+
+    token0["price"] = prices[token0["id"]]
+    token1["price"] = prices[token1["id"]]
+
+    edges.append({
+        "start": token0,
+        "end": token1,
+        "weight": weight_fwd,
+        "dex": pair["dex"],
+        "fee": pair["fee"]
+    })
+    edges.append({
+        "start": token1,
+        "end": token0,
+        "weight": weight_bwd,
+        "dex": pair["dex"],
+        "fee": pair["fee"]
+    })
+    if token0["id"] not in vertices:
+        vertices.add(token0["id"])
+    if token1["id"] not in vertices:
+        vertices.add(token1["id"])
 ################# UNISWAP_V2 CONTRACT CODE ####################
 
 ################# SUSHISWAP CONTRACT CODE ####################
@@ -169,36 +184,46 @@ def get_sushiswap_weight(pair):
     
     token0 = pair["token0"]
     token1 = pair["token1"]
-    for volume_usd in volumes_usd:
-        amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
-        amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
 
-        amount_in_fwd_w_fee = amount_in_fwd * (1.0 - UNISWAP_V2_FEE)
-        amount_in_bwd_w_fee = amount_in_bwd * (1.0 - UNISWAP_V2_FEE)
+    amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
+    amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
 
-        amount_output_fwd = (amount_in_fwd_w_fee * reserve1) / (reserve0 + amount_in_fwd)
-        amount_output_bwd = (amount_in_bwd_w_fee * reserve0) / (reserve1 + amount_in_bwd)
+    amount_in_fwd_w_fee = amount_in_fwd * (1.0 - UNISWAP_V2_FEE)
+    amount_in_bwd_w_fee = amount_in_bwd * (1.0 - UNISWAP_V2_FEE)
 
-        price_fwd = amount_output_fwd / amount_in_fwd
-        price_bwd = amount_output_bwd / amount_in_bwd
+    amount_output_fwd = (amount_in_fwd_w_fee * reserve1) / (reserve0 + amount_in_fwd)
+    amount_output_bwd = (amount_in_bwd_w_fee * reserve0) / (reserve1 + amount_in_bwd)
 
-        weight_fwd = -math.log10(price_fwd)
-        weight_bwd = -math.log10(price_bwd)
+    price_fwd = amount_output_fwd / amount_in_fwd
+    price_bwd = amount_output_bwd / amount_in_bwd
 
-        edges[volume_usd].append({
-            "start": token0,
-            "end": token1,
-            "weight": weight_fwd
-        })
-        edges[volume_usd].append({
-            "start": token1,
-            "end": token0,
-            "weight": weight_bwd
-        })
-        if token0["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token0["id"])
-        if token1["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token1["id"])
+    weight_fwd = -math.log10(price_fwd)
+    weight_bwd = -math.log10(price_bwd)
+
+    token0["reserve"] = reserve0
+    token1["reserve"] = reserve1
+
+    token0["price"] = prices[token0["id"]]
+    token1["price"] = prices[token1["id"]]
+
+    edges.append({
+        "start": token0,
+        "end": token1,
+        "weight": weight_fwd,
+        "dex": pair["dex"],
+        "fee": pair["fee"]
+    })
+    edges.append({
+        "start": token1,
+        "end": token0,
+        "weight": weight_bwd,
+        "dex": pair["dex"],
+        "fee": pair["fee"]
+    })
+    if token0["id"] not in vertices:
+        vertices.add(token0["id"])
+    if token1["id"] not in vertices:
+        vertices.add(token1["id"])
 ################# SUSHISWAP CONTRACT CODE ####################
 
 ################# BALANCER CONTRACT CODE ####################
@@ -229,36 +254,45 @@ def get_balancer_weight(pool):
         if token == token1["id"]:
             reserve1 = balances[index]
 
-    for volume_usd in volumes_usd:
-        amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
-        amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
+    amount_in_fwd = int(volume_usd * 10**token0["decimals"] / prices[token0["id"]]) # $ / ($/t0) = t0
+    amount_in_bwd = int(volume_usd * 10**token1["decimals"] / prices[token1["id"]]) # $ / ($/t0) = t0
 
-        amount_in_fwd_w_fee = amount_in_fwd * (1.0 - pool["fee"])
-        amount_in_bwd_w_fee = amount_in_bwd * (1.0 - pool["fee"])
+    amount_in_fwd_w_fee = amount_in_fwd * (1.0 - pool["fee"])
+    amount_in_bwd_w_fee = amount_in_bwd * (1.0 - pool["fee"])
 
-        amount_output_fwd = float(reserve1) * (1.0 - (float(reserve0)/(float(reserve0) + amount_in_fwd_w_fee))**(token0["weight"]/token1["weight"]))
-        amount_output_bwd = float(reserve0) * (1.0 - (float(reserve1)/(float(reserve1) + amount_in_bwd_w_fee))**(token1["weight"]/token0["weight"]))
+    amount_output_fwd = float(reserve1) * (1.0 - (float(reserve0)/(float(reserve0) + amount_in_fwd_w_fee))**(token0["weight"]/token1["weight"]))
+    amount_output_bwd = float(reserve0) * (1.0 - (float(reserve1)/(float(reserve1) + amount_in_bwd_w_fee))**(token1["weight"]/token0["weight"]))
 
-        price_fwd = amount_output_fwd / amount_in_fwd
-        price_bwd = amount_output_bwd / amount_in_bwd
+    price_fwd = amount_output_fwd / amount_in_fwd
+    price_bwd = amount_output_bwd / amount_in_bwd
 
-        weight_fwd = -math.log10(price_fwd)
-        weight_bwd = -math.log10(price_bwd)
+    weight_fwd = -math.log10(price_fwd)
+    weight_bwd = -math.log10(price_bwd)
 
-        edges[volume_usd].append({
-            "start": token0,
-            "end": token1,
-            "weight": weight_fwd
-        })
-        edges[volume_usd].append({
-            "start": token1,
-            "end": token0,
-            "weight": weight_bwd
-        })
-        if token0["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token0["id"])
-        if token1["id"] not in vertices[volume_usd]:
-            vertices[volume_usd].add(token1["id"])
+    token0["reserve"] = reserve0
+    token1["reserve"] = reserve1
+
+    token0["price"] = prices[token0["id"]]
+    token1["price"] = prices[token1["id"]]
+
+    edges.append({
+        "start": token0,
+        "end": token1,
+        "weight": weight_fwd,
+        "dex": pool["dex"],
+        "fee": pool["fee"]
+    })
+    edges.append({
+        "start": token1,
+        "end": token0,
+        "weight": weight_bwd,
+        "dex": pool["dex"],
+        "fee": pool["fee"]
+    })
+    if token0["id"] not in vertices:
+        vertices.add(token0["id"])
+    if token1["id"] not in vertices:
+        vertices.add(token1["id"])
 ################# BALANCER CONTRACT CODE ####################
 
 # Loop through each v2 pool pair and extract relevant information
@@ -282,13 +316,10 @@ for edge in edge_data:
 filename = "./graph.json"
 
 graph = {
-    "volumes": volumes_usd
+    "volume": volume_usd,
+    "edges": edges,
+    "vertices": list(vertices)
 }
-for volume in volumes_usd:
-    graph[volume] = {
-        "edges": edges[volume],
-        "vertices": list(vertices[volume])
-    }
 # Write data to the JSON file
 with open(filename, "w") as file:
     json.dump(graph, file, indent=4)

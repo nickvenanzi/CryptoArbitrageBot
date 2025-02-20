@@ -18,7 +18,7 @@ def findArbitrage(edges, vertices):
             edgePath[node] = []
         distance[startNode] = 0
         
-        for _ in range(len(vertices) - 1):
+        for iteration in range(len(vertices) - 1):
             updated = False
             for edgeIndex, edge in enumerate(edges):
                 start = edge["start"]["id"]
@@ -33,9 +33,10 @@ def findArbitrage(edges, vertices):
                         distance[end] = newDistance
                         nodePath[end] = nodePath[start] + [start]
                         edgePath[end] = edgePath[start] + [edgeIndex]
-                    updated = True
+                        updated = True
             if not updated:
                 break
+        print(f"iterations: {iteration+1}")
         if cycleDistance < 0:
             cycles.append({"edgePath": cycleEdges, "gain": 10**-cycleDistance})
     return cycles
@@ -43,17 +44,23 @@ def findArbitrage(edges, vertices):
 with open('graph.json', 'r') as file:
     graph = json.load(file)
 
-volumes_usd = graph.get("volumes", [])
+volume_usd = graph.get("volume", 0)
 
-for volume in volumes_usd:
-    edges = graph[f"{volume}"]["edges"]
-    vertices = graph[f"{volume}"]["vertices"]
-    cycles = findArbitrage(edges, vertices)
+edges = graph["edges"]
+vertices = graph["vertices"]
+cycles = findArbitrage(edges, vertices)
 
-    # Specify the filename
-    filename = f"./cycles/{volume}.json"
+blufs = []
+for i, cycle in enumerate(cycles):
+    edgeData = [edges[edgeIndex] for edgeIndex in cycle["edgePath"]]
+    bluf = "->".join([edge["start"]["symbol"] for edge in edgeData + [edgeData[0]]])
+    blufs.append(f"{round((cycle["gain"]-1)*100, 2)}%: {bluf}")
+    cycles[i]["edgePath"] = edgeData
 
-    # Write data to the JSON file
-    with open(filename, "w") as file:
-        json.dump({"cycles": cycles}, file, indent=4)
+# Specify the filename
+filename = f"./cycles.json"
+
+# Write data to the JSON file
+with open(filename, "w") as file:
+    json.dump({"BLUF": blufs, "cycles": cycles}, file, indent=4)
 
