@@ -1,9 +1,30 @@
 import json
 from web3 import Web3
 import math
+import time
+from datetime import datetime
 
+start_time = time.time()
 # Connect to Ethereum node
 web3 = Web3(Web3.HTTPProvider('http://10.0.0.49:8545'))
+
+
+with open('cycles.json', 'r') as file:
+    cycles_data = json.load(file)
+
+# Access the pools data
+cycles = cycles_data.get("cycles", [])
+
+with open('prices.json', 'r') as file:
+    prices = json.load(file)
+
+gas_used = 150_000  
+gas_price_wei = web3.eth.gas_price  
+
+# Calculate gas cost in ETH and USD
+gas_cost_eth = gas_used * gas_price_wei / 10**18  # Convert WEI to ETH
+gas_cost_usd = gas_cost_eth * prices["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"]  # Convert to USD
+
 
 ################# UNISWAP_V3 CONTRACT CODE ####################
 QUOTER_V2_ABI = [
@@ -113,38 +134,49 @@ def optimize(path):
     return previous_volume, current_profit
 
 def ternarySearch(path):
-    min_val = 1.0
-    max_val = 100.0
-    while min_val + 0.1 < max_val:
+    min_val = 10.0
+    max_val = 10000.0
+    while min_val + 5 < max_val:
         m = (min_val + max_val)/2
-        left_profit = computeProfit(path, m - 1)
-        mid_profit = computeProfit(path, m)
-        right_profit = computeProfit(path, m + 1)
-        print(f"(min={round(min_val, 1)},max={round(max_val, 1)}): ({m}) -> (${round(mid_profit, 2)})")
-        if right_profit > mid_profit: ## move right
+        left_profit = computeProfit(path, m - 0.5)
+        right_profit = computeProfit(path, m + 0.5)
+        if right_profit > left_profit: ## move right
             min_val = m + 1
-        elif left_profit > mid_profit: ## move left
+        else: ## move left
             max_val = m - 1
-        else:
-            return m, mid_profit
-    return m, mid_profit
+    return m, (left_profit + right_profit)/2
 
-with open('cycles.json', 'r') as file:
-    cycles_data = json.load(file)
-
-# Access the pools data
-cycles = cycles_data.get("cycles", [])
-
+blufs = []
 for i, cycle in enumerate(cycles):
     path = cycle["edgePath"]
     volume, profit = ternarySearch(path)
+    profit -= gas_cost_usd * len(path)
+    bluf = "->".join([edge["start"]["symbol"] for edge in path + [path[0]]])
+    blufs.append(f"Volume: ${round(volume, 2)}, Profit: ${round(profit, 2)}: {bluf}")
     cycles[i]["volume"] = volume
     cycles[i]["optimized_profit"] = profit
-    print(f"{"-"*40}")
+    percentDone = (i+1)/len(cycles)
+    dashes = round(percentDone*60)
+    print(f"\r{"-"*dashes}{" "*(60-dashes)}| {round(percentDone*100)}%", end="", flush=True)
 
 # Specify the filename
 filename = f"./cyclesOptimized.json"
 
 # Write data to the JSON file
 with open(filename, "w") as file:
-    json.dump({"cycles": cycles}, file, indent=4)
+    json.dump({"BLUF": blufs, "cycles": cycles}, file, indent=4)
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+print(f"Execution time: {elapsed_time:.6f} seconds")
+
+# Get the current date and time
+timestamp = datetime.now()
+
+# Print the timestamp
+print("Current Timestamp:", timestamp)
+with open("results.txt", "a") as file:  # "a" mode appends to the file
+    for bluf in blufs:
+        file.write(f"{timestamp}: {bluf}\n")
+print("Results appended.")

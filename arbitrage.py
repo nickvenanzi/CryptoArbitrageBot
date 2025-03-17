@@ -1,6 +1,8 @@
 import math
 import json
+import time
 
+start_time = time.time()
 def findArbitrage(edges, vertices):
     cycles = []
     distance = {}
@@ -9,8 +11,6 @@ def findArbitrage(edges, vertices):
     count = 0
     for startNode in vertices:
         count += 1
-        if count % 10 == 0:
-            print(f"{round(count / len(vertices)*100, 2)}% done iterations")
         cycleDistance = math.inf ## defaul value just needs to be >= 0
         for node in vertices:
             distance[node] = math.inf
@@ -18,7 +18,7 @@ def findArbitrage(edges, vertices):
             edgePath[node] = []
         distance[startNode] = 0
         
-        for iteration in range(len(vertices) - 1):
+        for _ in range(len(vertices) - 1):
             updated = False
             for edgeIndex, edge in enumerate(edges):
                 start = edge["start"]["id"]
@@ -36,7 +36,6 @@ def findArbitrage(edges, vertices):
                         updated = True
             if not updated:
                 break
-        print(f"iterations: {iteration+1}")
         if cycleDistance < 0:
             cycles.append({"edgePath": cycleEdges, "gain": 10**-cycleDistance})
     return cycles
@@ -53,7 +52,7 @@ cycles = findArbitrage(edges, vertices)
 blufs = []
 for i, cycle in enumerate(cycles):
     edgeData = [edges[edgeIndex] for edgeIndex in cycle["edgePath"]]
-    bluf = "->".join([edge["start"]["symbol"] for edge in edgeData + [edgeData[0]]])
+    bluf = "->".join([f"{edge["start"]["symbol"]} ({edge["dex"]})" for edge in edgeData + [edgeData[0]]])
     blufs.append(f"{round((cycle["gain"]-1)*100, 2)}%: {bluf}")
     cycles[i]["edgePath"] = edgeData
 
@@ -64,3 +63,7 @@ filename = f"./cycles.json"
 with open(filename, "w") as file:
     json.dump({"BLUF": blufs, "cycles": cycles}, file, indent=4)
 
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+print(f"Execution time: {elapsed_time:.6f} seconds")
